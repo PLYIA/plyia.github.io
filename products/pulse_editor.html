@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pulse Editor - L'éditeur de texte IA privé par PLYIA</title>
+    <meta name="description" content="Découvrez Pulse Editor. L'outil IA minimaliste pour reformuler, corriger et résumer vos textes localement, en toute confidentialité et sans abonnement.">
+    <link rel="icon" type="image/png" href="../images/PLYIA_Icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&amp;display=swap" rel="stylesheet">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VR0VNZ9C4N"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-VR0VNZ9C4N');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLYIA | L'IA qui vous appartient</title>
+    <link rel="icon" type="image/png" href="images/PLYIA_Icon.png">
+    <meta name="description" content="Découvrez PLYIA, la suite de logiciels IA 100% privés qui tournent sur votre machine. Sans abonnement, sans espionnage.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;700&amp;display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../style.css">
+
+    <!-- SEO Meta Tags -->
+    <meta name="keywords" content="Pulse Editor, PLYIA, IA, Editeur de texte IA, IA locale, Phi-3-mini, Correction de texte, Résumé de texte">
+    <meta name="author" content="MadeByBatpolygon">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Pulse Editor - L'éditeur de texte IA privé par PLYIA">
+    <meta property="og:description" content="L'outil IA minimaliste pour reformuler, corriger et résumer vos textes localement, en toute confidentialité.">
+    <meta property="og:image" content="https://plyia.fr/images/screenshots/pulse_editor_screenshot1.jpg">
+    <meta property="og:url" content="https://plyia.fr/products/pulse_editor.html">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Pulse Editor - L'éditeur de texte IA privé par PLYIA">
+    <meta name="twitter:description" content="L'outil IA minimaliste pour reformuler, corriger et résumer vos textes localement, en toute confidentialité.">
+    <meta name="twitter:image" content="https://plyia.fr/images/screenshots/pulse_editor_screenshot1.jpg">
+</head>
+<button id="scrollTopBtn" title="Retour en haut">↑</button>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KVR89QZ5"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div class="blur-orb" id="orb1"></div>
+    <div class="blur-orb" id="orb2"></div>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo"><img src="../images/PLYIA_Icon.png" alt="PLYIA Logo"><span>PLYIA</span></a>
+            <ul class="nav-links">
+                <li><a href="../index.html#produits">Produits</a></li>
+                <li><a href="../index.html#philosophie">Philosophie</a></li>
+                <li><a href="../index.html#roadmap">Roadmap</a></li>
+            </ul>
+            <a href="/contact.html" class="nav-cta">Contact</a>
+        </div>
+    </nav>
+
+    <main class="product-detail-page">
+        <header class="product-hero-container">
+            <a href="../index.html" class="back-link">← Retour à l'accueil</a>
+            <h1>Pulse Editor</h1>
+            <p class="tagline">L'éditeur de texte IA minimaliste pour des tâches atomiques : reformuler, corriger, résumer.</p>
+        </header>
+
+        <div class="product-showcase-grid">
+            <div class="product-gallery-container">
+                <div class="product-gallery">
+                    <div class="slider-wrapper">
+                        <div class="slider-container">
+                            <div class="slide"><img src="../images/screenshots/pulse_editor_screenshot1.jpg" alt="Capture d'écran 1 de Pulse Editor" onclick="openLightbox(this)"></div>
+                            <div class="slide"><img src="../images/screenshots/pulse_editor_screenshot2.jpg" alt="Capture d'écran 2 de Pulse Editor" onclick="openLightbox(this)"></div>
+                            <div class="slide"><img src="../images/screenshots/pulse_editor_screenshot3.jpg" alt="Capture d'écran 3 de Pulse Editor" onclick="openLightbox(this)"></div>
+                            <div class="slide"><img src="../images/screenshots/pulse_editor_screenshot4.jpg" alt="Capture d'écran 4 de Pulse Editor" onclick="openLightbox(this)"></div>
+                            <div class="slide"><img src="../images/screenshots/pulse_editor_screenshot5.jpg" alt="Capture d'écran 5 de Pulse Editor" onclick="openLightbox(this)"></div>
+                        </div>
+                    </div>
+                    <button class="slider-arrow prev" onclick="moveSlide(-1)">&#10094;</button>
+                    <button class="slider-arrow next" onclick="moveSlide(1)">&#10095;</button>
+                    <div class="slider-nav"></div>
+                </div>
+            </div>
+
+            <div class="product-info-container">
+                <div class="buy-box">
+                    <span class="price-detail">9 € - Licence à Vie</span>
+                    <a href="#" id="open-modal-btn" class="cta-button">Acheter Pulse Editor</a>
+                </div>
+                <div class="specs-box">
+                    <h3>Prérequis Techniques</h3>
+                    <p><strong>Modèle IA :</strong> Phi-3-mini-4k-instruct</p>
+                    <p><strong>Configuration :</strong> CPU Only</p>
+                    <p><strong>Mémoire RAM :</strong> <strong>8 Go (Minimum)</strong> / 16 Go (Recommandés)</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="product-details-content">
+            <section class="product-description">
+                <h2>En détail</h2>
+                <p>Pulse Editor est une application de bureau hautement optimisée, conçue pour faire tourner des modèles de langage de manière simple, stable et efficace sur votre propre machine, sans la complexité technique habituelle.</p>
+                <h3>Fonctionnalités Clés :</h3>
+                <ul>
+                    <li>✓ Réécriture instantanée de paragraphes.</li>
+                    <li>✓ Correction orthographique et grammaticale de pointe.</li>
+                    <li>✓ Résumés concis de documents ou d'articles.</li>
+                    <li>✓ Fonctionne entièrement hors ligne, respectant votre vie privée.</li>
+                    <li>✓ Interface épurée conçue pour la concentration.</li>
+                </ul>
+            </section>
+        
+            <div class="disclaimer-box">
+                <h3>⚠️ Transparence sur les Modèles Open Source</h3>
+                <p>PLYIA et Batpolygon ne sont pas les créateurs du modèle d'IA Phi-3-mini. Nous recommandons ce modèle pour son excellent rapport performance/légèreté. Il s'agit d'un projet open source développé par Microsoft. <strong>Ce que vous achetez avec Pulse Editor, c'est l'interface logicielle et l'installateur qui rendent l'utilisation de ce modèle simple et accessible.</strong></p>
+                <a href="https://huggingface.co/microsoft/Phi-3-mini-4k-instruct" target="_blank" rel="noopener noreferrer">En savoir plus sur le modèle Phi-3-mini</a>
+            </div>
+
+            <section class="full-width-section">
+                <h2>Transparence & Performance</h2>
+                <div class="performance-graph-container">
+                    <svg width="100%" viewBox="0 0 500 250" class="performance-graph"><rect width="500" height="250" fill="var(--card-bg-color)" rx="12"></rect><g class="grid" stroke="rgba(255, 255, 255, 0.1)" stroke-width="1"><line x1="50" y1="50" x2="50" y2="200"></line><line x1="50" y1="200" x2="450" y2="200"></line></g><g class="labels" fill="var(--text-muted-color)" font-size="12" font-family="var(--font-family)"><text x="40" y="50" dy="4" text-anchor="end">100%</text><text x="40" y="125" dy="4" text-anchor="end">50%</text><text x="40" y="200" dy="4" text-anchor="end">0%</text><text x="15" y="125" transform="rotate(-90, 15, 125)" text-anchor="middle">Efficacité</text><text x="100" y="220" text-anchor="middle">50</text><text x="250" y="220" text-anchor="middle">500</text><text x="400" y="220" text-anchor="middle">1000+</text><text x="250" y="240" text-anchor="middle" font-weight="700">Nombre de mots</text></g><path d="M 50 195 C 120 120, 200 75, 250 75 S 400 80, 450 85" fill="none" stroke="var(--accent-blue)" stroke-width="3" stroke-linecap="round" class="performance-curve"></path><g class="data-points"><circle class="data-point" r="6" data-position="0.3" data-words="~50 mots" data-effectiveness="95%" data-info="Correction d'un e-mail."></circle><circle class="data-point" r="6" data-position="0.5" data-words="~500 mots" data-effectiveness="95%" data-info="Résumé d'un article."></circle><circle class="data-point" r="6" data-position="0.88" data-words="~1000 mots" data-effectiveness="82%" data-info="Nettoyage d'un premier jet."></circle></g><g id="tooltip" visibility="hidden"><rect id="tooltip-bg" height="75" rx="8" fill="rgba(0,0,0,0.8)" stroke="var(--accent-blue)"></rect><text id="tooltip-line1" x="10" y="25" font-size="14" font-weight="700" fill="var(--text-color)"></text><text id="tooltip-line2" x="10" y="45" font-size="12" fill="var(--text-color)"></text><text id="tooltip-line3" x="10" y="60" font-size="12" fill="var(--text-muted-color)"></text></g></svg>
+                </div>
+            </section>
+            
+            <div class="usage-tips-box">
+                <h3>💡 Conseil d'Utilisation : La Règle d'Or du Contexte</h3>
+                <p>Comme toute IA, Pulse Editor donne les meilleurs résultats lorsque vous lui fournissez un contexte suffisant. L'outil est conçu pour travailler sur des phrases complètes ou des paragraphes. Si vous lui donnez des bribes de phrases très courtes et ambiguës, le modèle peut "halluciner" et inventer un contexte erroné. Pour une efficacité maximale, assurez-vous que votre texte d'entrée contient au moins 20 à 30 mots.</p>
+            </div>
+
+            <section id="compatibility-test" class="compatibility-section">
+                <h2>Test de Compatibilité Rapide</h2>
+                <div id="test-box">
+                    <button id="run-test-btn" class="cta-button">Lancer le Test</button>
+                    <div id="test-results" class="results-container"></div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()"><span class="lightbox-close">&times;</span><img class="lightbox-content" id="lightbox-img"></div>
+    <div id="compatibility-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeCompatibilityModal()">&times;</button>
+            <h3>Vérification des Prérequis</h3>
+            <p>Avant de finaliser, merci de vérifier que votre machine est compatible avec Pulse Editor. Vous pouvez effectuer un test rapide directement sur cette page.</p>
+            <div class="modal-actions">
+                <button id="modal-scroll-to-test" class="modal-button secondary">Faire le test</button>
+                <a href="#" class="lemonsqueezy-button modal-button primary">Acheter quand même</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-socials">
+            <a href="https://www.youtube.com/@PlyiaOfficiel" target="_blank" rel="noopener noreferrer" title="YouTube">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+            </a>
+            <a href="https://www.reddit.com/user/plyia/" target="_blank" rel="noopener noreferrer" title="Reddit">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M24 11.779c0-1.459-1.192-2.645-2.657-2.645-.715 0-1.363.286-1.84.746-1.81-1.191-4.259-1.982-6.951-2.046l1.443-4.631 4.105.973c.002 1.054.855 1.905 1.909 1.905 1.055 0 1.909-.851 1.909-1.905s-.854-1.905-1.909-1.905c-.754 0-1.412.433-1.735 1.069l-4.54-1.076c-.19-.045-.383.014-.521.16-.138.146-.188.357-.132.548l-1.503 4.831c-2.81.005-5.388.766-7.29 1.921-.458-.423-1.07-.678-1.748-.678-1.465 0-2.657 1.187-2.657 2.646 0 .97.538 1.818 1.339 2.291-.01.087-.015.176-.015.266 0 2.893 3.421 5.244 7.632 5.244s7.632-2.351 7.632-5.244c0-.09-.005-.179-.015-.266.801-.473 1.339-1.321 1.339-2.291zm-15.343 2.115c-.742 0-1.343-.6-1.343-1.343s.601-1.343 1.343-1.343c.742 0 1.343.6 1.343 1.343s-.601 1.343-1.343 1.343zm6.686 0c-.742 0-1.343-.6-1.343-1.343s.601-1.343 1.343-1.343c.742 0 1.343.6 1.343 1.343s-.601 1.343-1.343 1.343z"/></svg>
+            </a>
+        </div>
+        <div class="footer-links">
+            <a href="/legal/privacy.html">Politique de Confidentialité</a>
+            <a href="/legal/terms.html">Conditions Générales de Vente</a>
+            <a href="/legal/refund.html">Politique de Remboursement</a>
+            <a href="/faq.html">FAQ</a>
+            <a href="/contact.html">Contact</a>
+            <a href="/legal/mentions-legales.html">Mentions Légales</a>
+        </div>
+        <p>© 2025 PLYIA - Tous droits réservés.</p>
+    </footer>
+
+    <script src="https://assets.lemonsqueezy.com/lemon.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- SECTION 1: CARROUSEL ---
+            let currentSlide = 0;
+            let slideInterval;
+            const slides = document.querySelectorAll('.slide');
+            const sliderContainer = document.querySelector('.slider-container');
+            const sliderNav = document.querySelector('.slider-nav');
+            if (slides.length > 0) {
+                slides.forEach((_, index) => {
+                    const dot = document.createElement('div');
+                    dot.classList.add('slider-nav-dot');
+                    dot.addEventListener('click', () => goToSlide(index));
+                    sliderNav.appendChild(dot);
+                });
+                const dots = document.querySelectorAll('.slider-nav-dot');
+                window.goToSlide = (index) => { currentSlide = index; sliderContainer.style.transform = `translateX(-${currentSlide * 100}%)`; updateNav(); resetInterval(); };
+                const updateNav = () => { dots.forEach(dot => dot.classList.remove('active')); dots[currentSlide].classList.add('active'); };
+                window.moveSlide = (n) => { let newIndex = currentSlide + n; if (newIndex >= slides.length) newIndex = 0; if (newIndex < 0) newIndex = slides.length - 1; goToSlide(newIndex); };
+                const startInterval = () => { slideInterval = setInterval(() => moveSlide(1), 5000); };
+                const resetInterval = () => { clearInterval(slideInterval); startInterval(); };
+                goToSlide(0);
+            }
+
+            // --- SECTION 2: LIGHTBOX ---
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            window.openLightbox = (img) => { if(slideInterval) clearInterval(slideInterval); lightbox.style.display = 'flex'; lightboxImg.src = img.src; };
+            window.closeLightbox = () => { lightbox.style.display = 'none'; if(slideInterval) startInterval(); };
+
+            // --- SECTION 3: GRAPHIQUE INTERACTIF ---
+            const svgGraph = document.querySelector('.performance-graph');
+            if (svgGraph) {
+                const curvePath = svgGraph.querySelector('.performance-curve');
+                const dataPoints = svgGraph.querySelectorAll('.data-point');
+                const tooltip = svgGraph.querySelector('#tooltip');
+                const tooltipBg = svgGraph.querySelector('#tooltip-bg');
+                const tooltipLine1 = svgGraph.querySelector('#tooltip-line1');
+                const tooltipLine2 = svgGraph.querySelector('#tooltip-line2');
+                const tooltipLine3 = svgGraph.querySelector('#tooltip-line3');
+                const pathLength = curvePath.getTotalLength();
+                const alignPoints = () => { dataPoints.forEach(point => { const pos = parseFloat(point.getAttribute('data-position')); const p = curvePath.getPointAtLength(pathLength * pos); point.setAttribute('cx', p.x); point.setAttribute('cy', p.y); }); };
+                dataPoints.forEach(point => {
+                    point.addEventListener('mouseenter', e => {
+                        tooltipLine1.textContent = `Input : ${e.target.getAttribute('data-words')}`;
+                        tooltipLine2.textContent = `Efficacité : ${e.target.getAttribute('data-effectiveness')}`;
+                        tooltipLine3.textContent = `Exemple : ${e.target.getAttribute('data-info')}`;
+                        const padding = 20; const maxWidth = Math.max(tooltipLine1.getBBox().width, tooltipLine2.getBBox().width, tooltipLine3.getBBox().width); tooltipBg.setAttribute('width', maxWidth + padding);
+                        tooltip.setAttribute('visibility', 'visible');
+                    });
+                    point.addEventListener('mousemove', e => { const CTM = svgGraph.getScreenCTM(); let x = (e.clientX - CTM.e) / CTM.a + 15; let y = (e.clientY - CTM.f) / CTM.d - 15; if (x + tooltipBg.getBBox().width > svgGraph.viewBox.baseVal.width) { x = (e.clientX - CTM.e) / CTM.a - tooltipBg.getBBox().width - 15; } tooltip.setAttribute('transform', `translate(${x}, ${y})`); });
+                    point.addEventListener('mouseleave', () => tooltip.setAttribute('visibility', 'hidden'));
+                });
+                alignPoints();
+            }
+
+            // --- SECTION 4: MODAL & TEST DE COMPATIBILITÉ ---
+            const mainBuyButton = document.getElementById('open-modal-btn');
+            const modal = document.getElementById('compatibility-modal');
+            const scrollToTestBtn = document.getElementById('modal-scroll-to-test');
+            const testSection = document.getElementById('compatibility-test');
+            const runTestBtn = document.getElementById('run-test-btn');
+            const testResultsDiv = document.getElementById('test-results');
+
+            if (mainBuyButton) { mainBuyButton.addEventListener('click', e => { e.preventDefault(); modal.style.display = 'flex'; }); }
+            window.closeCompatibilityModal = () => { modal.style.display = 'none'; };
+            scrollToTestBtn.addEventListener('click', () => { closeCompatibilityModal(); testSection.scrollIntoView({ behavior: 'smooth' }); });
+            modal.addEventListener('click', e => { if (e.target === modal) closeCompatibilityModal(); });
+
+            const runCompatibilityCheck = (cores, ram) => {
+                const requiredRam = 8, optimalRam = 16, requiredCores = 4;
+                let conclusionClass = '', conclusionText = '';
+                if (ram >= requiredRam && cores >= requiredCores) {
+                    conclusionText = ram >= optimalRam ? 'OPTIMAL : Votre configuration est excellente !' : 'SUFFISANT : Votre configuration est compatible.';
+                    conclusionClass = ram >= optimalRam ? 'result-optimal' : 'result-sufficient';
+                } else {
+                    conclusionClass = 'result-insufficient';
+                    conclusionText = 'INSUFFISANT : Votre configuration risque d\'être trop juste.';
+                }
+                
+                let finalHTML = `<div class="result-line"><strong>Cœurs CPU :</strong> ${cores} (Requis: ${requiredCores})</div><div class="result-line"><strong>Mémoire RAM :</strong> ${ram} Go (Requis: ${requiredRam} Go)</div><div class="result-conclusion ${conclusionClass}">${conclusionText}</div>`;
+                
+                // NOTE: Pensez à remplacer le lien placeholder ci-dessous
+                if (conclusionClass === 'result-sufficient' || conclusionClass === 'result-optimal') {
+                    finalHTML += `<a href="#" class="lemonsqueezy-button cta-button" style="margin-top: 1.5rem; display: block;">Acheter Pulse Editor</a>`;
+                }
+                
+                testResultsDiv.innerHTML = finalHTML;
+            };
+
+            const showManualTest = () => {
+                testResultsDiv.innerHTML = `
+                    <p>Le test automatique n'a pas pu déterminer vos spécifications. Veuillez les entrer manuellement :</p>
+                    <div class="manual-input-group">
+                        <label for="cpu-cores">Nombre de cœurs CPU :</label>
+                        <input type="number" id="cpu-cores" value="${navigator.hardwareConcurrency || 4}" min="1">
+                    </div>
+                    <div class="manual-input-group">
+                        <label for="ram-gb">Mémoire RAM (en Go) :</label>
+                        <input type="number" id="ram-gb" placeholder="Ex: 16" min="1">
+                    </div>
+                    <button id="verify-manual-btn" class="cta-button" style="margin-top: 1rem;">Vérifier</button>`;
+                document.getElementById('verify-manual-btn').addEventListener('click', () => {
+                    const manualCores = document.getElementById('cpu-cores').value || 0;
+                    const manualRam = document.getElementById('ram-gb').value || 0;
+                    if (manualRam > 0) runCompatibilityCheck(parseInt(manualCores), parseInt(manualRam));
+                });
+            };
+            
+            runTestBtn.addEventListener('click', () => {
+                const userCores = navigator.hardwareConcurrency || 0;
+                const userRam = navigator.deviceMemory || 0;
+                if (userRam > 0 && userCores > 0) {
+                    runCompatibilityCheck(userCores, userRam);
+                    testResultsDiv.innerHTML += `<a id="manual-test-link">Informations incorrectes ? Faire un test manuel.</a>`;
+                    document.getElementById('manual-test-link').addEventListener('click', (e) => { e.preventDefault(); showManualTest(); });
+                } else {
+                    showManualTest();
+                }
+            });
+
+            const scrollTopBtn = document.getElementById('scrollTopBtn');
+
+            window.onscroll = () => {
+                if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                    scrollTopBtn.classList.add('visible');
+                } else {
+                    scrollTopBtn.classList.remove('visible');
+                }
+            };
+
+            scrollTopBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+        });
+    </script>
+</body>
+</html>

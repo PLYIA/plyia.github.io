@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Spark - Générateur d'Images IA par PLYIA</title>
+    <meta name="description" content="Générez des images photoréalistes et artistiques avec Pixel Spark. Un outil IA 100% local, sans censure, propulsé par Lumina 2.0. Propriété à vie.">
+    <link rel="icon" type="image/png" href="../images/PLYIA_Icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VR0VNZ9C4N"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-VR0VNZ9C4N');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLYIA | L'IA qui vous appartient</title>
+    <link rel="icon" type="image/png" href="images/PLYIA_Icon.png">
+    <meta name="description" content="Découvrez PLYIA, la suite de logiciels IA 100% privés qui tournent sur votre machine. Sans abonnement, sans espionnage.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../style.css">
+
+    <!-- SEO Meta Tags -->
+    <meta name="keywords" content="Pixel Spark, PLYIA, IA, Générateur d'images, IA locale, Lumina 2.0, Stable Diffusion, Photorealisme, Art IA">
+    <meta name="author" content="MadeByBatpolygon">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Pixel Spark - Générateur d'Images IA par PLYIA">
+    <meta property="og:description" content="Générez des images photoréalistes et artistiques avec Pixel Spark. Un outil IA 100% local, sans censure, propulsé par Lumina 2.0.">
+    <meta property="og:image" content="https://plyia.fr/images/screenshots/pixel_spark_test1.png">
+    <meta property="og:url" content="https://plyia.fr/products/pixel_spark.html">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Pixel Spark - Générateur d'Images IA par PLYIA">
+    <meta name="twitter:description" content="Générez des images photoréalistes et artistiques avec Pixel Spark. Un outil IA 100% local, sans censure, propulsé par Lumina 2.0.">
+    <meta name="twitter:image" content="https://plyia.fr/images/screenshots/pixel_spark_test1.png">
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KVR89QZ5"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div class="blur-orb" id="orb1"></div>
+    <div class="blur-orb" id="orb2"></div>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo"><img src="../images/PLYIA_Icon.png" alt="PLYIA Logo"><span>PLYIA</span></a>
+            <ul class="nav-links">
+                <li><a href="../index.html#produits">Produits</a></li>
+                <li><a href="../index.html#philosophie">Philosophie</a></li>
+                <li><a href="../index.html#roadmap">Roadmap</a></li>
+            </ul>
+            <a href="/contact.html" class="nav-cta">Contact</a>
+        </div>
+    </nav>
+
+    <main class="product-detail-page">
+        <header class="product-hero-container">
+            <a href="../index.html" class="back-link">← Retour à l'accueil</a>
+            <h1>Pixel Spark</h1>
+            <p class="tagline">Votre studio de création d'images IA. Puissant, privé et sans limites.</p>
+        </header>
+
+        <div class="product-showcase-grid">
+            <div class="product-gallery-container">
+                <div class="product-gallery">
+                    <div class="slider-wrapper">
+                        <div class="slider-container">
+                            <div class="slide"><img src="../images/screenshots/pixel_spark_live_preview.gif" alt="Démonstration de Pixel Spark" onclick="openLightbox(this)"></div>
+                            <div class="slide"><img src="../images/screenshots/pixel_spark_screenshot1.jpg" alt="Capture d'écran 1 de Pixel Spark" onclick="openLightbox(this)"></div>
+                            <div class="slide"><img src="../images/screenshots/pixel_spark_screenshot2.jpg" alt="Capture d'écran 2 de Pixel Spark" onclick="openLightbox(this)"></div>
+                            <div class="slide"><img src="../images/screenshots/pixel_spark_screenshot3.jpg" alt="Capture d'écran 3 de Pixel Spark" onclick="openLightbox(this)"></div>
+                            <div class="slide"><img src="../images/screenshots/pixel_spark_screenshot4.jpg" alt="Capture d'écran 4 de Pixel Spark" onclick="openLightbox(this)"></div>
+                            <div class="slide"><img src="../images/screenshots/pixel_spark_screenshot5.jpg" alt="Capture d'écran 5 de Pixel Spark" onclick="openLightbox(this)"></div>
+                        </div>
+                    </div>
+                    <button class="slider-arrow prev" onclick="moveSlide(-1)">&#10094;</button>
+                    <button class="slider-arrow next" onclick="moveSlide(1)">&#10095;</button>
+                    <div class="slider-nav"></div>
+                </div>
+            </div>
+
+            <div class="product-info-container">
+                <div class="buy-box">
+                    <span class="price-detail">17 € - Licence à Vie</span>
+                    <a href="#" id="open-modal-btn" class="cta-button">Acheter Pixel Spark</a>
+                </div>
+                    <div class="specs-box">
+                        <h3>Prérequis Techniques</h3>
+                        <p><strong>Mode GPU (Optimal) :</strong> GPU NVIDIA avec <strong>8 Go+ VRAM</strong> | 16 Go RAM</p>
+                        <p><strong>Mode CPU (Fallback) :</strong> Processeur 8+ cœurs | <strong>16 Go+ RAM</strong></p>
+                        <p style="font-size: 0.8rem; opacity: 0.8; margin-top: 1rem;"><em>Note : Le mode CPU est fonctionnel mais peut entraîner des temps de génération 10x plus longs.</em></p>
+                    </div>
+            </div>
+        </div>
+
+        <div class="product-details-content">
+            <section class="product-description">
+                <h2>En détail</h2>
+                <p>Ce que vous achetez avec Pixel Spark, c'est une application de bureau optimisée pour faire tourner les modèles de génération d'images de manière simple, stable et efficace. Vous investissez dans une interface intuitive et la garantie d'une expérience fluide.</p>
+                <h3>Fonctionnalités Clés :</h3>
+                <ul>
+                    <li>✓ <strong>Qualité XL Exceptionnelle :</strong> Propulsé par le modèle recommandé Lumina 2.0 pour des résultats riches en détails.</li>
+                    <li>✓ <strong>Réalisme Bluffant :</strong> Créez des portraits et des scènes photoréalistes avec une maîtrise impressionnante de la lumière.</li>
+                    <li>✓ <strong>Maîtrise des Styles Artistiques :</strong> Fusionnez des concepts complexes et imitez même le style d'artistes connus.</li>
+                    <li>✓ <strong>Confidentialité & Liberté Totales :</strong> Pas de censure, pas de crédits, pas d'envoi de données.</li>
+                </ul>
+            </section>
+
+            <section class="full-width-section showcase-section">
+                <h2>Démonstration de Puissance : 5 Tests, 5 Styles</h2>
+                <div class="test-case">
+                    <div class="test-image"><img src="../images/screenshots/pixel_spark_test1.png" alt="Résultat du Test 1" onclick="openLightbox(this)"></div>
+                    <div class="test-prompt">
+                        <h3>Composition Thématique</h3>
+                        <p class="prompt-text"><strong>Prompt :</strong> "digital art, a majestic cat made of swirling cosmic nebulae and stars, sitting on the moon, looking at a distant Earth in the background, high-contrast, vibrant colors"</p>
+                        <div class="test-verdict success"><strong>Verdict :</strong> Succès - Le modèle fusionne parfaitement plusieurs concepts abstraits.</div>
+                    </div>
+                </div>
+                <div class="test-case">
+                    <div class="test-image"><img src="../images/screenshots/pixel_spark_test3.png" alt="Résultat du Test 2" onclick="openLightbox(this)"></div>
+                    <div class="test-prompt">
+                        <h3>Réalisme & Esthétique</h3>
+                        <p class="prompt-text"><strong>Prompt :</strong> "(masterpiece, 8k, photorealistic), close-up portrait of a young beautiful Korean woman, soft natural smile, sitting in a minimalist coffee shop in Seoul, soft morning light from a window, cinematic film grain, aesthetic, shot on Portra 400"</p>
+                        <div class="test-verdict success"><strong>Verdict :</strong> Succès - Le modèle maîtrise le photoréalisme et les styles esthétiques.</div>
+                    </div>
+                </div>
+                <div class="test-case">
+                    <div class="test-image"><img src="../images/screenshots/pixel_spark_test2.png" alt="Résultat du Test 3" onclick="openLightbox(this)"></div>
+                    <div class="test-prompt">
+                        <h3>Stress Artistique & Surréalisme</h3>
+                        <p class="prompt-text"><strong>Prompt :</strong> "(masterpiece, surrealism), A classical Greco-Roman marble statue of Venus de Milo, disintegrating into a flock of shimmering golden birds. Background is Van Gogh's 'The Starry Night'. The floor is a perfect reflective surface. The reflection is a paradox: it mirrors the statue, but reflects an ancient library instead of the sky."</p>
+                        <div class="test-verdict partial"><strong>Verdict :</strong> Succès Partiel - Échoue uniquement sur le paradoxe complexe du reflet.</div>
+                    </div>
+                </div>
+                <div class="test-case">
+                    <div class="test-image"><img src="../images/screenshots/pixel_spark_test4.png" alt="Résultat du Test 4" onclick="openLightbox(this)"></div>
+                    <div class="test-prompt">
+                        <h3>Connaissance Culturelle (Licence)</h3>
+                        <p class="prompt-text"><strong>Prompt :</strong> "cinematic shot of Batman, on a rooftop gargoyle overlooking a dark, rainy neo-gothic city, comic book art style of Jim Lee, dramatic lighting"</p>
+                        <div class="test-verdict success"><strong>Verdict :</strong> Succès - Le modèle connaît la pop culture et imite le style d'artistes.</div>
+                    </div>
+                </div>
+                <div class="test-case">
+                    <div class="test-image"><img src="../images/screenshots/pixel_spark_test5.png" alt="Résultat du Test 5" onclick="openLightbox(this)"></div>
+                    <div class="test-prompt">
+                        <h3>Connaissance Culturelle (Célébrité)</h3>
+                        <p class="prompt-text"><strong>Prompt :</strong> "studio portrait photo of Ryan Gosling as a 1940s private detective, wearing a fedora and trench coat, black and white, film noir style"</p>
+                        <div class="test-verdict style"><strong>Verdict :</strong> Succès Stylistique - L'ambiance est parfaite, mais le visage n'est pas une copie conforme (éthique anti-deepfake).</div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="disclaimer-box">
+                <h3>⚠️ Transparence sur les Modèles Open Source</h3>
+                <p>PLYIA et Batpolygon ne sont pas les créateurs du modèle d'IA Lumina Image 2.0. Nous recommandons ce modèle pour sa qualité exceptionnelle. Il s'agit d'un projet open source développé par Alpha-VLLM. <strong>Ce que vous achetez avec Pixel Spark, c'est l'interface logicielle et l'installateur qui rendent l'utilisation de ce modèle simple et accessible.</strong></p>
+                <a href="https://huggingface.co/Alpha-VLLM/Lumina-Image-2.0" target="_blank" rel="noopener noreferrer">En savoir plus sur le modèle Lumina Image 2.0</a>
+            </div>
+
+            <section id="compatibility-test" class="compatibility-section">
+                <h2>Test de Compatibilité Matérielle</h2>
+                <div id="test-box">
+                    <button id="run-test-btn" class="cta-button">Lancer le Test</button>
+                    <div id="test-results" class="results-container"></div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()"><span class="lightbox-close">&times;</span><img class="lightbox-content" id="lightbox-img"></div>
+    <div id="compatibility-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeCompatibilityModal()">&times;</button>
+            <h3>⚠️ Vérification Essentielle du GPU</h3>
+            <p>Pixel Spark est fortement recommandé avec une <strong>carte graphique (GPU) NVIDIA avec au moins 8 Go de VRAM</strong>. Veuillez effectuer le test.</p>
+            <div class="modal-actions">
+                <button id="modal-scroll-to-test" class="modal-button secondary">Faire le test</button>
+                <a href="#" class="lemonsqueezy-button modal-button primary">Acheter quand même</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-socials">
+            <a href="https://www.youtube.com/@PlyiaOfficiel" target="_blank" rel="noopener noreferrer" title="YouTube">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+            </a>
+            <a href="https://www.reddit.com/user/plyia/" target="_blank" rel="noopener noreferrer" title="Reddit">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M24 11.779c0-1.459-1.192-2.645-2.657-2.645-.715 0-1.363.286-1.84.746-1.81-1.191-4.259-1.982-6.951-2.046l1.443-4.631 4.105.973c.002 1.054.855 1.905 1.909 1.905 1.055 0 1.909-.851 1.909-1.905s-.854-1.905-1.909-1.905c-.754 0-1.412.433-1.735 1.069l-4.54-1.076c-.19-.045-.383.014-.521.16-.138.146-.188.357-.132.548l-1.503 4.831c-2.81.005-5.388.766-7.29 1.921-.458-.423-1.07-.678-1.748-.678-1.465 0-2.657 1.187-2.657 2.646 0 .97.538 1.818 1.339 2.291-.01.087-.015.176-.015.266 0 2.893 3.421 5.244 7.632 5.244s7.632-2.351 7.632-5.244c0-.09-.005-.179-.015-.266.801-.473 1.339-1.321 1.339-2.291zm-15.343 2.115c-.742 0-1.343-.6-1.343-1.343s.601-1.343 1.343-1.343c.742 0 1.343.6 1.343 1.343s-.601 1.343-1.343 1.343zm6.686 0c-.742 0-1.343-.6-1.343-1.343s.601-1.343 1.343-1.343c.742 0 1.343.6 1.343 1.343s-.601 1.343-1.343 1.343z"/></svg>
+            </a>
+        </div>
+        <div class="footer-links">
+            <a href="/legal/privacy.html">Politique de Confidentialité</a>
+            <a href="/legal/terms.html">Conditions Générales de Vente</a>
+            <a href="/legal/refund.html">Politique de Remboursement</a>
+            <a href="/faq.html">FAQ</a>
+            <a href="/contact.html">Contact</a>
+            <a href="/legal/mentions-legales.html">Mentions Légales</a>
+        </div>
+        <p>© 2025 PLYIA - Tous droits réservés.</p>
+    </footer>
+
+    <button id="scrollTopBtn" title="Retour en haut">↑</button>
+
+    <script src="https://assets.lemonsqueezy.com/lemon.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- SECTION 1: CARROUSEL ---
+            let currentSlide = 0; let slideInterval; const slides = document.querySelectorAll('.slide'); const sliderContainer = document.querySelector('.slider-container'); const sliderNav = document.querySelector('.slider-nav');
+            if (slides.length > 0) {
+                slides.forEach((_, index) => { const dot = document.createElement('div'); dot.classList.add('slider-nav-dot'); dot.addEventListener('click', () => goToSlide(index)); sliderNav.appendChild(dot); });
+                const dots = document.querySelectorAll('.slider-nav-dot');
+                window.goToSlide = (index) => { currentSlide = index; sliderContainer.style.transform = `translateX(-${currentSlide * 100}%)`; updateNav(); resetInterval(); };
+                const updateNav = () => { dots.forEach(dot => dot.classList.remove('active')); dots[currentSlide].classList.add('active'); };
+                window.moveSlide = (n) => { let newIndex = currentSlide + n; if (newIndex >= slides.length) newIndex = 0; if (newIndex < 0) newIndex = slides.length - 1; goToSlide(newIndex); };
+                const startInterval = () => { slideInterval = setInterval(() => moveSlide(1), 5000); };
+                const resetInterval = () => { clearInterval(slideInterval); startInterval(); };
+                goToSlide(0);
+            }
+
+            // --- SECTION 2: LIGHTBOX ---
+            const lightbox = document.getElementById('lightbox'); const lightboxImg = document.getElementById('lightbox-img');
+            window.openLightbox = (img) => { if(slideInterval) clearInterval(slideInterval); lightbox.style.display = 'flex'; lightboxImg.src = img.src; };
+            window.closeLightbox = () => { lightbox.style.display = 'none'; if(slideInterval) startInterval(); };
+
+            // --- SECTION 3: MODAL & TEST DE COMPATIBILITÉ (CORRIGÉ) ---
+            const mainBuyButton = document.getElementById('open-modal-btn'); const modal = document.getElementById('compatibility-modal'); const scrollToTestBtn = document.getElementById('modal-scroll-to-test'); const testSection = document.getElementById('compatibility-test'); const runTestBtn = document.getElementById('run-test-btn'); const testResultsDiv = document.getElementById('test-results');
+
+            if (mainBuyButton) { mainBuyButton.addEventListener('click', e => { e.preventDefault(); modal.style.display = 'flex'; }); }
+            window.closeCompatibilityModal = () => { modal.style.display = 'none'; };
+            scrollToTestBtn.addEventListener('click', () => { closeCompatibilityModal(); testSection.scrollIntoView({ behavior: 'smooth' }); });
+            modal.addEventListener('click', e => { if (e.target === modal) closeCompatibilityModal(); });
+
+            const runCompatibilityCheck = (gpuVendor, vram, cores, ram) => {
+                const requiredVram = 8, optimalVram = 12, requiredCores = 8, recommendedRam = 16;
+                let isNvidia = gpuVendor.toLowerCase().includes('nvidia');
+                let conclusionClass = '', conclusionText = '', gpuVerdict = '';
+
+                // CAS 1: GPU NVIDIA OPTIMAL
+                if (isNvidia && vram >= requiredVram) {
+                    gpuVerdict = `<strong style="color: var(--color-success);">Détecté : NVIDIA</strong> - Recommandé !`;
+                    conclusionClass = vram >= optimalVram ? 'result-optimal' : 'result-sufficient';
+                    conclusionText = vram >= optimalVram ? 'OPTIMAL : Votre configuration est parfaite !' : 'SUFFISANT : Votre configuration est compatible.';
+                } 
+                // CAS 2: FALLBACK CPU POSSIBLE (CPU assez puissant)
+                else if (cores >= requiredCores) {
+                    conclusionClass = 'result-sufficient'; // Jaune/Orange pour avertir mais pas bloquer
+                    // SOUS-CAS 2a: GPU NVIDIA mais VRAM insuffisante
+                    if (isNvidia && vram < requiredVram) {
+                        gpuVerdict = `<strong style="color: var(--color-partial);">Détecté : NVIDIA</strong> - VRAM Insuffisante.`;
+                        conclusionText = `MODE CPU LENT : Votre GPU NVIDIA n'a pas assez de VRAM. Le logiciel utilisera votre CPU, ce qui sera <strong>10x plus long</strong>.`;
+                    } 
+                    // SOUS-CAS 2b: GPU non-NVIDIA
+                    else {
+                        gpuVerdict = `<strong style="color: var(--color-partial);">Détecté : ${gpuVendor}</strong> - Non recommandé.`;
+                        conclusionText = 'COMPATIBILITÉ CPU : Votre GPU n\'est pas recommandé. Le logiciel utilisera votre CPU, ce qui sera <strong>10x plus long</strong>.';
+                    }
+                }
+                // CAS 3: TOUT EST INSUFFISANT
+                else {
+                    gpuVerdict = `<strong style="color: #ff8a8a;">Détecté : ${gpuVendor}</strong> - Non recommandé.`;
+                    conclusionClass = 'result-insufficient';
+                    conclusionText = 'INSUFFISANT : Votre GPU n\'est pas recommandé et votre CPU est trop faible pour une expérience acceptable.';
+                }
+
+                let finalHTML = `<div class="result-line"><strong>Carte Graphique :</strong> ${gpuVerdict}</div><div class="result-line"><strong>Mémoire VRAM :</strong> ${vram} Go (Requis: ${requiredVram} Go)</div><div class="result-line"><strong>Coeurs CPU :</strong> ${cores} (Recommandé en mode CPU: ${requiredCores}+)</div><div class="result-line"><strong>Mémoire RAM :</strong> ${ram} Go (Recommandé: ${recommendedRam} Go)</div><div class="result-conclusion ${conclusionClass}">${conclusionText}</div>`;
+                
+                if (conclusionClass === 'result-sufficient' || conclusionClass === 'result-optimal') {
+                    finalHTML += `<a href="#" class="lemonsqueezy-button cta-button" style="margin-top: 1.5rem; display: block;">Acheter Pixel Spark</a>`;
+                }
+
+                testResultsDiv.innerHTML = finalHTML;
+            };
+
+            const showManualTest = (detectedGpuVendor, detectedCores, detectedRam) => {
+                testResultsDiv.innerHTML = `
+                    <p>Veuillez confirmer/entrer vos spécifications :</p>
+                    <div class="manual-input-group">
+                        <label for="gpu-vendor">Marque du GPU :</label>
+                        <select id="gpu-vendor"></select>
+                    </div>
+                    <div class="manual-input-group">
+                        <label for="vram-gb">Mémoire Vidéo VRAM (en Go) :</label>
+                        <input type="number" id="vram-gb" placeholder="Ex: 8" min="1">
+                    </div>
+                     <div class="manual-input-group">
+                        <label for="cpu-cores">Nombre de cœurs CPU :</label>
+                        <input type="number" id="cpu-cores" value="${detectedCores}" min="1">
+                    </div>
+                    <div class="manual-input-group">
+                        <label for="ram-gb">Mémoire RAM (en Go) :</label>
+                        <input type="number" id="ram-gb" value="${detectedRam}" placeholder="Ex: 16" min="1">
+                    </div>
+                    <button id="verify-manual-btn" class="cta-button" style="margin-top: 1rem;">Vérifier ma configuration</button>`;
+                
+                const gpuSelect = document.getElementById('gpu-vendor');
+                const vendors = ['NVIDIA', 'AMD', 'Intel', 'Autre'];
+                vendors.forEach(v => {
+                    const option = document.createElement('option');
+                    option.value = v; option.textContent = v;
+                    if (detectedGpuVendor.toLowerCase().includes(v.toLowerCase())) { option.selected = true; }
+                    gpuSelect.appendChild(option);
+                });
+                document.getElementById('verify-manual-btn').addEventListener('click', () => {
+                    const manualGpu = gpuSelect.value;
+                    const manualVram = document.getElementById('vram-gb').value || 0;
+                    const manualCores = document.getElementById('cpu-cores').value || 0;
+                    const manualRam = document.getElementById('ram-gb').value || 0;
+                    if (manualVram > 0 && manualCores > 0 && manualRam > 0) { 
+                        runCompatibilityCheck(manualGpu, parseInt(manualVram), parseInt(manualCores), parseInt(manualRam)); 
+                    } else {
+                        alert("Veuillez remplir tous les champs.");
+                    }
+                });
+            };
+
+            runTestBtn.addEventListener('click', async () => {
+                testResultsDiv.innerHTML = `<p>Analyse automatique en cours...</p>`;
+                let gpuVendor = 'Inconnu';
+                if ('gpu' in navigator) {
+                    try { const adapter = await navigator.gpu.requestAdapter(); if (adapter) { const info = await adapter.requestAdapterInfo(); gpuVendor = info.vendor || 'Inconnu'; } } catch (e) { gpuVendor = 'Accès refusé'; }
+                }
+                const userCores = navigator.hardwareConcurrency || 0;
+                const userRam = navigator.deviceMemory || 0;
+                showManualTest(gpuVendor, userCores, userRam);
+            });
+            
+            // --- SCRIPT DU BOUTON SCROLL-TO-TOP ---
+            const scrollTopBtn = document.getElementById('scrollTopBtn');
+            window.onscroll = () => {
+                if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                    scrollTopBtn.classList.add('visible');
+                } else {
+                    scrollTopBtn.classList.remove('visible');
+                }
+            };
+            scrollTopBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>

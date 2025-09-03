@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://plyia.fr/sitemap.xml
