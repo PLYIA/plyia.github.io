@@ -69,12 +69,55 @@ section { padding: calc(var(--spacing-unit) * 4) calc(var(--spacing-unit) * 2); 
 
 
 /* --- HERO SECTION & LOGO (PAGE D'ACCUEIL) --- */
-.hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative; padding: calc(var(--spacing-unit) * 2); }
-.hero-content { display: flex; flex-direction: column; align-items: center; padding-top: 38vh; }
-.hero p { font-size: 1.25rem; margin-bottom: calc(var(--spacing-unit) * 2.5); }
-.dynamic-logo { position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%); width: 90vw; max-width: 450px; aspect-ratio: 1 / 1; display: flex; justify-content: center; align-items: center; }
-.logo-icon, .logo-text, .logo-outline { position: absolute; transition: transform 0.2s ease-out; height: auto; }
-.logo-icon { width: 100%; opacity: 0.8; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3)); z-index: 1; }
+.hero { 
+    min-height: 120vh; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    position: relative; 
+    padding: calc(var(--spacing-unit) * 2); 
+}
+
+.hero-content { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    /* MODIFICATION : On réduit le padding pour remonter le texte sous le logo */
+    padding-top: 35vh; 
+}
+
+.hero p { 
+    font-size: 1.25rem; 
+    margin-bottom: calc(var(--spacing-unit) * 2.5); 
+}
+
+.dynamic-logo { 
+    position: absolute; 
+    top: 33%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    width: 90vw; 
+    max-width: 450px; 
+    aspect-ratio: 1 / 1; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.logo-icon, .logo-text, .logo-outline { 
+    position: absolute; 
+    transition: transform 0.2s ease-out; 
+    height: auto; 
+}
+
+.logo-icon { 
+    width: 100%; 
+    opacity: 0.8; 
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3)); 
+    z-index: 1; 
+}
+
 .logo-text {
     width: 88%;
     height: 90%;
@@ -83,22 +126,32 @@ section { padding: calc(var(--spacing-unit) * 4) calc(var(--spacing-unit) * 2); 
     background-size: 200% 100%;
     animation: left-right-sweep 15s ease-in-out infinite;
 
-    /* === CORRECTION ICI === */
-    /* On met la version standard D'ABORD */
     mask-image: url('../images/PLYIA_TextPart.png');
     mask-size: contain;
     mask-repeat: no-repeat;
     mask-position: center;
-
-    /* Puis la version préfixée comme fallback pour les anciens navigateurs */
     -webkit-mask-image: url('../images/PLYIA_TextPart.png');
     -webkit-mask-size: contain;
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-position: center;
+    
+    /* MODIFICATION : On ajoute "bottom" pour décaler le texte vers le haut */
+    /* de 5px à l'intérieur du logo, sans affecter l'animation de parallaxe. */
+    bottom: 40px; 
 }
-.logo-outline { width: 90%; z-index: 3; }
-@keyframes left-right-sweep { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
 
+.logo-outline { 
+    width: 90%; 
+    z-index: 3; 
+
+    /* MODIFICATION : On décale aussi le contour de la même valeur que le texte */
+    bottom: 170px; 
+}
+
+@keyframes left-right-sweep { 
+    0% { background-position: 200% 0; } 
+    100% { background-position: -200% 0; } 
+}
 
 /* --- GRILLES & SECTIONS (PAGE D'ACCUEIL) --- */
 .products-grid, .philosophy-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: calc(var(--spacing-unit) * 2); max-width: 1200px; margin: 0 auto; }
