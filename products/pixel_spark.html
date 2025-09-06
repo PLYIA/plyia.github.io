@@ -84,7 +84,6 @@
                             <div class="slide"><img src="../images/screenshots/pixel_spark_screenshot2.jpg" alt="Capture d'écran 2 de Pixel Spark" onclick="openLightbox(this)"></div>
                             <div class="slide"><img src="../images/screenshots/pixel_spark_screenshot3.jpg" alt="Capture d'écran 3 de Pixel Spark" onclick="openLightbox(this)"></div>
                             <div class="slide"><img src="../images/screenshots/pixel_spark_screenshot4.jpg" alt="Capture d'écran 4 de Pixel Spark" onclick="openLightbox(this)"></div>
-                            <div class="slide"><img src="../images/screenshots/pixel_spark_screenshot5.jpg" alt="Capture d'écran 5 de Pixel Spark" onclick="openLightbox(this)"></div>
                         </div>
                     </div>
                     <button class="slider-arrow prev" onclick="moveSlide(-1)">&#10094;</button>
@@ -106,6 +105,24 @@
                     </div>
             </div>
         </div>
+
+        <section class="full-width-section simple-steps-section" style="padding-top: 4rem; padding-bottom: 4rem;">
+            <h2>Votre IA Prête en 3 Étapes</h2>
+            <div class="philosophy-grid" style="max-width: 1200px; margin-top: 2rem;">
+                <div class="philosophy-card">
+                    <h3 style="text-align: center;">1. Installez le Logiciel</h3>
+                    <p style="text-align: center;">Un seul installateur s'occupe de la partie technique. Il met en place le logiciel et son environnement Python optimisé sur votre machine. Pas de prérequis compliqués.</p>
+                </div>
+                <div class="philosophy-card">
+                    <h3 style="text-align: center;">2. Activez l'IA</h3>
+                    <p style="text-align: center;">Au premier lancement, le logiciel vous guide. <strong>Téléchargez notre modèle recommandé en un clic</strong> pour un équilibre parfait performance/ressources, ou <strong>importez directement votre propre modèle</strong>. C'est vous qui choisissez.</p>
+                </div>
+                <div class="philosophy-card">
+                    <h3 style="text-align: center;">3. Créez Sans Limites</h3>
+                    <p style="text-align: center;">Une fois le modèle chargé, l'IA est prête. Profitez de toute sa puissance à travers une interface simple et intuitive. Zéro ligne de commande, 100% création.</p>
+                </div>
+            </div>
+        </section>
 
         <div class="product-details-content">
             <section class="product-description">
@@ -165,9 +182,13 @@
             </section>
 
             <div class="disclaimer-box">
-                <h3>⚠️ Transparence sur les Modèles Open Source</h3>
-                <p>PLYIA et Batpolygon ne sont pas les créateurs du modèle d'IA Lumina Image 2.0. Nous recommandons ce modèle pour sa qualité exceptionnelle. Il s'agit d'un projet open source développé par Alpha-VLLM. <strong>Ce que vous achetez avec Pixel Spark, c'est l'interface logicielle et l'installateur qui rendent l'utilisation de ce modèle simple et accessible.</strong></p>
-                <a href="https://huggingface.co/Alpha-VLLM/Lumina-Image-2.0" target="_blank" rel="noopener noreferrer">En savoir plus sur le modèle Lumina Image 2.0</a>
+                <h3>⚠️ Transparence : Modèles, Performances et Installation</h3>
+                <p>
+                    <strong>Notre Rôle et les Modèles Open Source :</strong> PLYIA ne crée pas les modèles d'IA. Nous utilisons des projets open source exceptionnels, comme le modèle <strong>Lumina Image 2.0</strong> développé par Alpha-VLLM pour ce logiciel. <strong>Ce que vous achetez avec Pixel Spark, c'est une interface stable et un installateur intelligent qui rendent l'utilisation de cette technologie puissante simple et accessible.</strong> <a href="https://huggingface.co/Alpha-VLLM/Lumina-Image-2.0" target="_blank" rel="noopener noreferrer">En savoir plus sur le modèle Lumina Image 2.0</a>.
+                </p>
+                <p style="margin-top: 1rem;">
+                    <strong>Performances et Installation :</strong> Puisque tout tourne sur votre machine pour garantir votre confidentialité, les performances dépendent <strong>uniquement</strong> de votre configuration matérielle. De plus, il est <strong>parfaitement normal</strong> de voir des fenêtres de terminal (écrans noirs) s'afficher brièvement lors de l'installation ; c'est notre installateur qui configure l'environnement Python pour vous, de manière 100% automatique.
+                </p>
             </div>
 
             <section id="compatibility-test" class="compatibility-section">
@@ -226,7 +247,7 @@
                 window.goToSlide = (index) => { currentSlide = index; sliderContainer.style.transform = `translateX(-${currentSlide * 100}%)`; updateNav(); resetInterval(); };
                 const updateNav = () => { dots.forEach(dot => dot.classList.remove('active')); dots[currentSlide].classList.add('active'); };
                 window.moveSlide = (n) => { let newIndex = currentSlide + n; if (newIndex >= slides.length) newIndex = 0; if (newIndex < 0) newIndex = slides.length - 1; goToSlide(newIndex); };
-                const startInterval = () => { slideInterval = setInterval(() => moveSlide(1), 5000); };
+                const startInterval = () => { slideInterval = setInterval(() => moveSlide(1), 7000); };
                 const resetInterval = () => { clearInterval(slideInterval); startInterval(); };
                 goToSlide(0);
             }
