@@ -62,16 +62,16 @@
     <!-- BARRE DE NAVIGATION -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#" class="nav-logo">
-                <img src="images/PLYIA_Icon.png" alt="PLYIA Logo">
-                <span>PLYIA</span>
-            </a>
+            <a href="index.html" class="nav-logo"><img src="images/PLYIA_Icon.png" alt="PLYIA Logo"><span>PLYIA</span></a>
             <ul class="nav-links">
                 <li><a href="#produits">Produits</a></li>
-                <li><a href="#philosophie">Philosophie</a></li>
+                <li><a href="#vision">Notre Vision</a></li>
                 <li><a href="#roadmap">Roadmap</a></li>
             </ul>
-            <a href="/contact.html" class="nav-cta">Contact</a>
+            <div class="nav-actions">
+                <a href="products/plyia_connect.html" class="nav-cta-special">PLYIA Connect</a>
+                <a href="contact.html" class="nav-cta">Contact</a>
+            </div>
         </div>
     </nav>
 
@@ -94,47 +94,91 @@
         <section id="produits" class="products-section">
             <h2>Nos Logiciels Disponibles</h2>
             <div class="products-grid">
+                <!-- Carte Produit 1 : Pulse Editor -->
                 <a href="products/pulse_editor.html" class="product-card-link animate-on-scroll">
                     <div class="product-card">
-                        <h3>Pulse Editor</h3>
-                        <p>L'éditeur de texte IA minimaliste pour des tâches atomiques : reformuler, corriger et résumer.</p>
-                        <p class="product-specs">IA: Phi-3-mini | Specs: <strong>CPU Only</strong>, 8 Go+ RAM</p>
-                        <div class="details-button">Voir les détails</div>
+                        <!-- NOUVEAU : En-tête -->
+                        <div class="product-card-header">
+                            <img src="images/product_icons/PulseEditor_Icon.png" alt="Icône Pulse Editor" class="product-card-icon">
+                            <h3>Pulse Editor</h3>
+                        </div>
+                        <!-- NOUVEAU : Contenu Principal -->
+                        <div class="product-card-content">
+                            <p>L'éditeur de texte IA minimaliste pour des tâches atomiques : reformuler, corriger et résumer.</p>
+                            <p class="product-specs">IA: Phi-3-mini | Specs: <strong>CPU Only</strong>, 8 Go+ RAM</p>
+                            <div class="details-button">Voir les détails</div>
+                        </div>
                     </div>
                 </a>
+                <!-- Carte Produit 2 : Pixel Spark -->
                 <a href="products/pixel_spark.html" class="product-card-link animate-on-scroll">
                     <div class="product-card">
-                        <h3>Pixel Spark</h3>
-                        <p>Générateur d'images photoréalistes et artistiques de haute qualité, avec support des LoRA.</p>
-                        <p class="product-specs">IA: Lumina 2.0 | Specs: <strong>GPU Only</strong>, 8 Go+ VRAM</p>
-                        <div class="details-button">Voir les détails</div>
+                        <div class="product-card-header">
+                            <img src="images/product_icons/PixelSpark_Icon.png" alt="Icône Pixel Spark" class="product-card-icon">
+                            <h3>Pixel Spark</h3>
+                        </div>
+                        <div class="product-card-content">
+                            <p>Générateur d'images photoréalistes et artistiques de haute qualité, avec support des LoRA.</p>
+                            <p class="product-specs">IA: Lumina 2.0 | Specs: <strong>GPU Only</strong>, 8 Go+ VRAM</p>
+                            <div class="details-button">Voir les détails</div>
+                        </div>
                     </div>
                 </a>
+                <!-- Carte Produit 3 : Kortex Chat -->
                 <a href="products/kortex_chat.html" class="product-card-link animate-on-scroll">
                     <div class="product-card">
-                        <h3>Kortex Chat</h3>
-                        <p>Votre assistant IA local et privé, capable d'analyser documents, images et de faire des recherches web.</p>
-                        <p class="product-specs">IA: Llama-3.2 | Specs: <strong>CPU / GPU</strong>, 10 Go VRAM / 32 Go RAM</p>
-                        <div class="details-button">Voir les détails</div>
+                        <div class="product-card-header">
+                            <img src="images/product_icons/KortexChat_Icon.png" alt="Icône Kortex Chat" class="product-card-icon">
+                            <h3>Kortex Chat</h3>
+                        </div>
+                        <div class="product-card-content">
+                            <p>Votre assistant IA local et privé, capable d'analyser documents, images et de faire des recherches web.</p>
+                            <p class="product-specs">IA: Llama-3.2 | Specs: <strong>CPU / GPU</strong>, 10 Go VRAM / 32 Go RAM</p>
+                            <div class="details-button">Voir les détails</div>
+                        </div>
                     </div>
                 </a>
             </div>
         </section>
 
-        <section id="philosophie" class="philosophy-section">
-            <h2>Notre Philosophie</h2>
-            <div class="philosophy-grid">
-                <div class="philosophy-card animate-on-scroll">
-                    <h3> Technologie Complexe, Utilisation Simple </h3>
-                    <p>Pas besoin d'être un expert. Nous avons géré toute la complexité pour vous. Python, les dépendances, les optimisations... <strong>tout est inclus et pré-configuré dans l'installateur</strong>. Vous n'avez qu'à installer et créer. C'est du vrai 'Plug & Play'.</p>
+        <section id="vision" class="philosophy-section">
+            <h2>Deux Chemins, Une Mission : L'IA Pour Tous</h2>
+            <p style="max-width: 80ch; margin-bottom: 3rem;">
+                Notre mission est de rendre l'IA puissante accessible à tous. Nous savons que chaque utilisateur a des besoins différents. C'est pourquoi nous proposons deux approches distinctes.
+            </p>
+            <div class="vision-accordion">
+                <!-- Carte 1 : La Voie Locale (Ouverte par défaut) -->
+                <div class="philosophy-card vision-card active">
+                    <button class="vision-card-toggle">
+                        <h3>PLYIA Local : La Voie de la Souveraineté</h3>
+                    </button>
+                    <div class="vision-card-content">
+                        <p>Pour ceux qui ont le matériel et exigent un contrôle absolu. Cette gamme est fidèle à notre promesse fondamentale :</p>
+                        <ul class="vision-list">
+                            <li><strong>Confidentialité Absolue :</strong> Rien ne quitte jamais votre disque dur.</li>
+                            <li><strong>Propriété à Vie :</strong> Vous achetez votre logiciel, vous ne le louez pas.</li>
+                            <li><strong>Accès Hors Ligne :</strong> Une fois installé, le logiciel est 100% fonctionnel.</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="philosophy-card animate-on-scroll">
-                    <h3> Confidentialité totale </h3>
-                    <p>Vos données restent les vôtres. Tout est traité localement sur votre machine, rien n'est envoyé sur des serveurs externes. Votre vie privée est notre priorité.</p>
-                </div>
-                <div class="philosophy-card animate-on-scroll">
-                    <h3> Accès complet hors ligne </h3>
-                    <p>Libérez-vous des contraintes de connexion. Une fois installés, nos logiciels fonctionnent entièrement hors ligne, vous donnant la liberté de travailler n'importe où, n'importe quand.</p>
+
+                <!-- Carte 2 : La Voie Cloud (Fermée par défaut, avec le contenu du teaser) -->
+                <div class="philosophy-card vision-card">
+                    <button class="vision-card-toggle">
+                        <h3>PLYIA Connect : La Voie de l'Accessibilité</h3>
+                    </button>
+                    <div class="vision-card-content">
+                        <!-- NOUVEAU CONTENU FUSIONNÉ ICI -->
+                        <div class="connect-teaser-merged">
+                            <div class="connect-teaser-logo">
+                                <img src="images/PLYIA_Connect_Icon.png" alt="PLYIA Connect Logo">
+                            </div>
+                            <div class="connect-teaser-text">
+                                <p>La puissance des meilleurs modèles d'IA, <strong>sans les contraintes matérielles</strong>. Notre projet participatif pour rendre l'IA de pointe accessible à tous, sur n'importe quel appareil, via un service cloud.</p>
+                                <a href="products/plyia_connect.html" class="cta-button">Découvrir le Projet</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -162,12 +206,12 @@
             </a>
         </div>
         <div class="footer-links">
-            <a href="/legal/privacy.html">Politique de Confidentialité</a>
-            <a href="/legal/terms.html">Conditions Générales de Vente</a>
-            <a href="/legal/refund.html">Politique de Remboursement</a>
-            <a href="/faq.html">FAQ</a>
-            <a href="/contact.html">Contact</a>
-            <a href="/legal/mentions-legales.html">Mentions Légales</a>
+            <a href="legal/privacy.html">Politique de Confidentialité</a>
+            <a href="legal/terms.html">Conditions Générales de Vente</a>
+            <a href="legal/refund.html">Politique de Remboursement</a>
+            <a href="faq.html">FAQ</a>
+            <a href="contact.html">Contact</a>
+            <a href="legal/mentions-legales.html">Mentions Légales</a>
         </div>
         <p>© 2025 PLYIA - Tous droits réservés.</p>
     </footer>
@@ -230,6 +274,24 @@
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             });
 
+            const visionToggles = document.querySelectorAll('.vision-card-toggle');
+            const visionCards = document.querySelectorAll('.vision-card');
+
+            visionToggles.forEach(toggle => {
+                toggle.addEventListener('click', () => {
+                    const parentCard = toggle.closest('.vision-card');
+
+                    // Si la carte cliquée n'est pas déjà active, on la traite
+                    if (!parentCard.classList.contains('active')) {
+                        // D'abord, on ferme toutes les autres cartes
+                        visionCards.forEach(card => {
+                            card.classList.remove('active');
+                        });
+                        // Ensuite, on ouvre la carte cliquée
+                        parentCard.classList.add('active');
+                    }
+                });
+            });
         });
     </script>
 </body>

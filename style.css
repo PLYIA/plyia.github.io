@@ -153,96 +153,494 @@ section { padding: calc(var(--spacing-unit) * 4) calc(var(--spacing-unit) * 2); 
     100% { background-position: -200% 0; } 
 }
 
-/* --- GRILLES & SECTIONS (PAGE D'ACCUEIL) --- */
-.products-grid, .philosophy-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: calc(var(--spacing-unit) * 2); max-width: 1200px; margin: 0 auto; }
-.product-card, .philosophy-card { background-color: var(--card-bg-color); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-radius: var(--border-radius); padding: calc(var(--spacing-unit) * 2); border: 1px solid var(--card-border-color); transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; text-align: left; height: 100%; display: flex; flex-direction: column; }
-.product-card-link:hover .product-card, .philosophy-card:hover { transform: translateY(-10px); border-color: var(--card-hover-border-color); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); }
-.product-card-link { text-decoration: none; display: block; }
-.product-card p { flex-grow: 1; }
-.product-specs { font-size: 0.85rem; color: var(--text-muted-color); margin-bottom: var(--spacing-unit) !important; flex-grow: 0; }
-.details-button { background-color: rgba(255, 255, 255, 0.05); color: var(--text-color); padding: calc(var(--spacing-unit) * 0.8) calc(var(--spacing-unit) * 1.5); border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.2); font-weight: 600; text-align: center; margin-top: auto; transition: background-color 0.2s ease, color 0.2s ease; }
-.product-card-link:hover .details-button { background-color: var(--accent-blue); color: white; border-color: var(--accent-blue); }
-.roadmap-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--spacing-unit); max-width: 1200px; margin: 0 auto; }
-.roadmap-card { border-radius: 8px; padding: calc(var(--spacing-unit) * 1.5); border: 2px dashed rgba(255, 255, 255, 0.1); text-align: left; }
-.roadmap-card p, .roadmap-card strong { color: var(--text-muted-color); }
-.suggestion-button { margin-top: calc(var(--spacing-unit) * 3); background: transparent; border: 2px solid var(--accent-purple); color: var(--accent-purple); box-shadow: none; }
-.suggestion-button:hover { background: var(--accent-purple); border-color: var(--accent-purple); color: white; box-shadow: 0 8px 25px rgba(91, 29, 179, 0.3); }
-footer { padding: calc(var(--spacing-unit) * 3) calc(var(--spacing-unit) * 2); margin-top: calc(var(--spacing-unit) * 2); border-top: 1px solid rgba(255, 255, 255, 0.05); color: var(--text-muted-color); }
+/* ============================================= */
+/*          STRUCTURE & GRILLES GÉNÉRALES        */
+/* ============================================= */
 
+/* --- Grilles Principales --- */
+.products-grid,
+.philosophy-grid,
+.roadmap-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: calc(var(--spacing-unit) * 2);
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
-/*
-=========================================
-=== STYLES POUR PAGES PRODUITS (COMPLETS) ===
-=========================================
-*/
-.product-detail-page { padding: 0 var(--spacing-unit) 4rem; max-width: 1400px; margin: 0 auto; }
-.product-hero-container { padding-top: 120px; padding-bottom: 2rem; text-align: left; }
-.product-hero-container h1 { font-size: 3.5rem; }
-.tagline { font-size: 1.5rem; color: var(--text-muted-color); max-width: 60ch; }
+/* --- Layout des Pages Produits --- */
+.product-detail-page {
+    padding: 0 var(--spacing-unit) 4rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.product-hero-container {
+    padding-top: 120px;
+    padding-bottom: 2rem;
+    text-align: left;
+}
+
+.product-title-group {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem; /* Espace entre l'icône et le titre */
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.product-hero-icon {
+    width: 80px;  /* Taille de l'icône dans le hero */
+    height: 80px;
+    flex-shrink: 0;
+}
+
+.product-hero-container h1 {
+    margin: 0; /* On enlève la marge par défaut pour un meilleur alignement */
+}
+
+.tagline {
+    font-size: 1.2rem;
+    color: var(--text-muted-color);
+    max-width: 60ch;
+    text-align: left; /* Assure l'alignement à gauche */
+    margin: 0; /* On enlève les marges automatiques qui centrent */
+    padding-left: calc(80px + 1.5rem); /* Décale le texte pour l'aligner sous le titre */
+}
+
 .back-link { font-weight: 600; color: var(--text-muted-color); display: inline-block; margin-bottom: 1rem; }
 
-.product-showcase-grid { display: grid; grid-template-columns: 3fr 2fr; gap: 2.5rem; align-items: start; margin-top: 2rem; }
-.product-info-container { display: flex; flex-direction: column; gap: 1.5rem; }
+.product-showcase-grid {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 2.5rem;
+    align-items: start;
+    margin-top: 2rem;
+}
 
-.product-gallery { position: relative; border-radius: var(--border-radius); border: 1px solid var(--card-border-color); overflow: hidden; }
+.product-info-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.product-details-content {
+    max-width: 1200px;
+    margin: 4rem auto 0;
+}
+
+.full-width-section h2 {
+    text-align: center;
+}
+
+
+/* ============================================= */
+/*          COMPOSANTS DE CARTES (CARDS)         */
+/* ============================================= */
+
+/* --- Cartes de la Philosophie --- */
+.philosophy-card {
+    background-color: var(--card-bg-color);
+    backdrop-filter: blur(15px);
+    border-radius: var(--border-radius);
+    padding: calc(var(--spacing-unit) * 2);
+    border: 1px solid var(--card-border-color);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.philosophy-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--card-hover-border-color);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.product-card-link {
+    text-decoration: none;
+    display: block;
+}
+
+.product-card {
+    background-color: var(--card-bg-color);
+    backdrop-filter: blur(15px);
+    border-radius: var(--border-radius);
+    padding: calc(var(--spacing-unit) * 2);
+    border: 1px solid var(--card-border-color);
+    height: 100%;
+    display: flex;
+    flex-direction: column; /* La carte reste une colonne verticale */
+    text-align: left;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* --- Le nouvel en-tête de la carte --- */
+.product-card-header {
+    display: flex; /* Aligne l'icône et le titre horizontalement */
+    align-items: center; /* Centre verticalement l'icône et le titre */
+    gap: 1rem; /* Espace entre l'icône et le titre */
+    margin-bottom: 1.5rem; /* Espace sous l'en-tête */
+}
+
+.product-card-icon {
+    width: 48px; /* Taille de l'icône */
+    height: 48px;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 0; /* On enlève l'ancienne marge */
+}
+
+.product-card-header h3 {
+    margin: 0; /* On enlève la marge par défaut du titre */
+    position: relative;
+    z-index: 1;
+}
+
+/* --- Le contenu principal de la carte --- */
+.product-card-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Permet à ce bloc de prendre toute la hauteur restante */
+    position: relative;
+    z-index: 1;
+}
+
+.product-card-content p {
+    flex-grow: 1; /* Pousse le bouton en bas */
+    position: relative;
+    z-index: 1;
+}
+
+/* Le reste des styles (.product-specs, .details-button, etc.) est déjà bon */
+/* Assurez-vous juste que ces éléments sont bien relatifs et avec un z-index */
+.product-specs, .details-button {
+    position: relative;
+    z-index: 1;
+}
+
+.details-button {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--text-color);
+    padding: calc(var(--spacing-unit) * 0.8) calc(var(--spacing-unit) * 1.5);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-weight: 600;
+    text-align: center;
+    margin-top: auto;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+/* --- Effets de Survol pour les Cartes Produits --- */
+.product-card-link:hover .product-card {
+    transform: translateY(-10px);
+    border-color: var(--card-hover-border-color);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.product-card-link:hover .details-button {
+    background-color: var(--accent-blue);
+    color: white;
+    border-color: var(--accent-blue);
+}
+
+/* Effet de Lueur (pour les cartes produits uniquement) */
+.product-card::before {
+    content: '';
+    position: absolute;
+    top: var(--mouse-y, 50%);
+    left: var(--mouse-x, 50%);
+    width: 300px;
+    height: 300px;
+    background-image: radial-gradient(circle, rgba(12, 133, 190, 0.3) 0%, transparent 70%);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 0;
+}
+
+.product-card-link:hover .product-card::before {
+    opacity: 1;
+}
+
+/* --- Cartes de la Roadmap --- */
+.roadmap-card {
+    border-radius: 8px;
+    padding: calc(var(--spacing-unit) * 1.5);
+    border: 2px dashed rgba(255, 255, 255, 0.1);
+    text-align: left;
+}
+
+.roadmap-card p,
+.roadmap-card strong {
+    color: var(--text-muted-color);
+}
+
+/* --- Bouton "Faire une proposition" --- */
+.suggestion-button {
+    margin-top: calc(var(--spacing-unit) * 3);
+    background: transparent;
+    border: 2px solid var(--accent-purple); /* Bordure violette */
+    color: var(--accent-purple);
+    box-shadow: none;
+    transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.suggestion-button:hover {
+    background: var(--accent-purple);
+    color: white;
+    box-shadow: 0 8px 25px rgba(91, 29, 179, 0.3);
+}
+
+/* --- Footer --- */
+footer {
+    padding: calc(var(--spacing-unit) * 3) calc(var(--spacing-unit) * 2);
+    margin-top: calc(var(--spacing-unit) * 2);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    color: var(--text-muted-color);
+}
+
+
+/* ============================================= */
+/*       COMPOSANTS DES PAGES PRODUITS           */
+/* ============================================= */
+
+/* --- Carrousel d'Images --- */
+.product-gallery {
+    position: relative;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--card-border-color);
+    overflow: hidden;
+}
 .slider-wrapper { overflow: hidden; }
 .slider-container { display: flex; transition: transform 0.5s ease-in-out; }
 .slide { flex: 0 0 100%; width: 100%; }
 .slide img { width: 100%; height: auto; display: block; cursor: pointer; }
-.slider-arrow { position: absolute; top: 50%; transform: translateY(-50%); background-color: rgba(0, 0, 0, 0.4); color: white; border: none; font-size: 24px; padding: 10px 15px; border-radius: 50%; cursor: pointer; transition: background-color 0.2s ease; z-index: 10; }
+
+/* Flèches du Carrousel */
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    z-index: 10;
+}
 .slider-arrow:hover { background-color: rgba(0, 0, 0, 0.7); }
 .slider-arrow.prev { left: 15px; }
 .slider-arrow.next { right: 15px; }
-.slider-nav { display: flex; justify-content: center; align-items: center; padding-top: var(--spacing-unit); position: absolute; bottom: 15px; left: 50%; transform: translateX(-50%); }
-.slider-nav-dot { width: 12px; height: 12px; border-radius: 50%; background-color: rgba(255, 255, 255, 0.4); margin: 0 6px; cursor: pointer; transition: all 0.2s ease; }
+
+/* Points de Navigation du Carrousel */
+.slider-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: var(--spacing-unit);
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.slider-nav-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.4);
+    margin: 0 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
 .slider-nav-dot:hover { background-color: rgba(255, 255, 255, 0.7); }
 .slider-nav-dot.active { background-color: var(--accent-blue); transform: scale(1.2); }
 
-.specs-box, .buy-box, .product-description { background-color: var(--card-bg-color); backdrop-filter: blur(15px); border: 1px solid var(--card-border-color); border-radius: var(--border-radius); padding: 2rem; text-align: left; }
-.product-description p, .product-description ul { text-align: left; margin: 0; max-width: none; }
-.product-description ul { list-style: none; padding-left: 0; margin-top: 1rem; }
-.product-description li { margin-bottom: 0.5rem; }
-.buy-box .price-detail { font-size: 2rem; font-weight: 700; margin-bottom: 1rem; }
-.buy-box .cta-button { display: block; text-align: center; }
-.product-footer { margin-top: 4rem; }
+/* On applique le style "carte" de base à nos deux boîtes */
+.specs-box,
+.buy-box {
+    background-color: var(--card-bg-color);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: var(--border-radius);
+    padding: calc(var(--spacing-unit) * 2);
+    border: 1px solid var(--card-border-color);
+    text-align: left;
+}
 
-.product-details-content { max-width: 1200px; margin: 4rem auto 0; }
-.full-width-section h2 { text-align: center; }
+/* Styles spécifiques pour le contenu de la boîte d'achat */
+.buy-box .price-detail {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    display: block; /* S'assure qu'il prend toute la largeur */
+}
 
-.performance-graph-container { max-width: 800px; margin: 2rem auto; }
-.performance-graph-container .performance-graph { overflow: visible !important; }
-.performance-graph-container .performance-curve { stroke-dasharray: 1000; stroke-dashoffset: 1000; animation: draw-curve 2s ease-out 0.5s forwards; }
+.buy-box .cta-button {
+    display: block;
+    text-align: center;
+}
+.product-description p, 
+.product-description ul {
+    text-align: left;
+    margin: 0;
+    max-width: none;
+}
+.product-description ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 1rem;
+}
+.product-description li {
+    margin-bottom: 0.5rem;
+}
+
+/* --- Graphique de Performance --- */
+.performance-graph-container {
+    max-width: 800px;
+    margin: 2rem auto;
+}
+.performance-graph { overflow: visible !important; }
+.performance-curve {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: draw-curve 2s ease-out 0.5s forwards;
+}
 @keyframes draw-curve { to { stroke-dashoffset: 0; } }
-.data-point { fill: white; stroke: var(--accent-blue); stroke-width: 2px; cursor: pointer; transition: all 0.2s ease; }
+.data-point {
+    fill: white;
+    stroke: var(--accent-blue);
+    stroke-width: 2px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
 .data-point:hover { r: 8; fill: var(--accent-blue); }
 
+/* --- Showcase de Tests (Pixel Spark) --- */
 .showcase-section { padding-top: 2rem; }
-.test-case { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: center; text-align: left; margin-bottom: 4rem; }
+.test-case {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    align-items: center;
+    text-align: left;
+    margin-bottom: 4rem;
+}
 .test-case:nth-child(even) .test-image { order: 2; }
-.test-image img { width: 100%; border-radius: var(--border-radius); border: 1px solid var(--card-border-color); cursor: pointer; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.test-image img {
+    width: 100%;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--card-border-color);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 .test-image img:hover { transform: scale(1.03); box-shadow: 0 15px 30px rgba(0,0,0,0.2); }
-.prompt-text { background-color: var(--bg-color); padding: 1rem; border-radius: 8px; font-size: 0.9rem; font-family: monospace; line-height: 1.4; white-space: pre-wrap; border: 1px solid var(--card-border-color); margin-top: 1rem; }
-.test-verdict { padding: 0.8rem 1rem; border-radius: 8px; font-weight: 700; margin-top: 1.5rem; }
+.prompt-text {
+    background-color: var(--bg-color);
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-family: monospace;
+    line-height: 1.4;
+    white-space: pre-wrap;
+    border: 1px solid var(--card-border-color);
+    margin-top: 1rem;
+}
+.test-verdict {
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    font-weight: 700;
+    margin-top: 1.5rem;
+}
 .test-verdict.success { background-color: var(--bg-success); color: var(--color-success); }
 .test-verdict.partial { background-color: var(--bg-partial); color: var(--color-partial); }
 .test-verdict.style { background-color: var(--bg-style); color: var(--color-style); }
 
-.usage-tips-box, .disclaimer-box { text-align: left; background: linear-gradient(135deg, rgba(12, 133, 190, 0.1), rgba(91, 29, 179, 0.1)); border: 1px solid var(--accent-blue); border-radius: var(--border-radius); padding: 2rem; max-width: 900px; margin: 2rem auto; }
-.usage-tips-box h3, .disclaimer-box h3 { text-align: center; margin-bottom: 1rem; }
+/* --- Encarts d'Information (Conseils, Avertissements) --- */
+.usage-tips-box,
+.disclaimer-box {
+    text-align: left;
+    background: linear-gradient(135deg, rgba(12, 133, 190, 0.1), rgba(91, 29, 179, 0.1));
+    border: 1px solid var(--accent-blue);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    max-width: 900px;
+    margin: 2rem auto;
+}
+.usage-tips-box h3,
+.disclaimer-box h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
 
+/* --- Test de Compatibilité --- */
 .compatibility-section { background: transparent; }
-#test-box { background-color: var(--card-bg-color); border: 1px solid var(--card-border-color); border-radius: var(--border-radius); padding: calc(var(--spacing-unit) * 3); max-width: 600px; margin: 0 auto; }
-.results-container { margin-top: calc(var(--spacing-unit) * 2); text-align: left; border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: calc(var(--spacing-unit) * 2); }
+#test-box {
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--card-border-color);
+    border-radius: var(--border-radius);
+    padding: calc(var(--spacing-unit) * 3);
+    max-width: 600px;
+    margin: 0 auto;
+}
+.results-container {
+    margin-top: calc(var(--spacing-unit) * 2);
+    text-align: left;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: calc(var(--spacing-unit) * 2);
+}
 .result-line { font-size: 1.1rem; margin-bottom: var(--spacing-unit); }
-.result-conclusion { margin-top: var(--spacing-unit); padding: var(--spacing-unit); border-radius: 8px; font-weight: 700; text-align: center; }
+.result-conclusion {
+    margin-top: var(--spacing-unit);
+    padding: var(--spacing-unit);
+    border-radius: 8px;
+    font-weight: 700;
+    text-align: center;
+}
 .result-insufficient { background-color: rgba(255, 82, 82, 0.2); color: #ff8a8a; }
 .result-sufficient { background-color: var(--bg-partial); color: var(--color-partial); }
 .result-optimal { background-color: var(--bg-success); color: var(--color-success); }
 
-.manual-input-group { display: flex; justify-content: space-between; align-items: center; gap: 1rem; margin-bottom: 0.8rem; }
-.manual-input-group label { text-align: left; flex-basis: 50%; }
-.manual-input-group input, .manual-input-group select { flex-basis: 50%; padding: 8px; border-radius: 6px; border: 1px solid var(--text-muted-color); background-color: var(--bg-color); color: var(--text-color); }
-#manual-test-link { font-size: 0.8rem; margin-top: 1rem; display: block; text-align: center; cursor: pointer; }
+/* --- NOUVEAU : Styles pour les champs manuels --- */
+.manual-input-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.8rem;
+}
+.manual-input-group label {
+    text-align: left;
+    flex-basis: 50%;
+}
+.manual-input-group input, 
+.manual-input-group select {
+    flex-basis: 50%;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid var(--text-muted-color);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    font-size: 1rem;
+}
+#manual-test-link {
+    font-size: 0.8rem;
+    margin-top: 1rem;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: underline;
+}
 
 .lightbox { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.92); justify-content: center; align-items: center; }
 .lightbox-content { max-width: 90%; max-height: 80%; }
@@ -403,4 +801,363 @@ footer { padding: calc(var(--spacing-unit) * 3) calc(var(--spacing-unit) * 2); m
 .faq-answer p, .faq-answer ul {
     padding-top: 1rem;
     border-top: 1px solid var(--card-border-color);
+}
+
+
+/* Styles spécifiques pour le contenu de la boîte des specs */
+/* Le conteneur principal des specs */
+.specs-box h3 {
+    margin-bottom: 1.5rem;
+}
+
+/* Chaque groupe OS (Linux/Windows) est maintenant un conteneur d'accordéon */
+.os-spec-group {
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--card-border-color);
+}
+.os-spec-group:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.os-icon {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-right: 8px;
+    margin-top: -2px;
+}
+
+/* --- Hero Section de la page Connect --- */
+.connect-hero {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 colonne sur mobile */
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 120px auto 5rem auto;
+    align-items: center;
+    padding: 0 var(--spacing-unit);
+    justify-items: center; /* Centre horizontalement tous les enfants de la grille */
+}
+@media (min-width: 992px) {
+    .connect-hero {
+        grid-template-columns: 2fr 1fr;
+    }
+}
+
+/* On transforme le conteneur du texte en colonne flexible pour centrer son contenu */
+.hero-text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre horizontalement */
+    text-align: center;
+    width: 100%; 
+}
+
+/* On groupe le logo et le titre verticalement */
+.hero-title-group {
+    display: flex;
+    flex-direction: column; /* Met le logo AU-DESSUS du titre */
+    align-items: center;
+    gap: 0; /* On gère l'espacement via les marges pour plus de contrôle */
+    margin-bottom: 2rem; /* Espace après le titre */
+}
+
+/* On agrandit le logo et on ajoute un espace en dessous */
+.connect-logo {
+    height: 150px; /* Taille augmentée pour un impact visuel fort */
+    width: auto;
+    margin-bottom: 1rem; /* Espace entre le logo et le titre H1 */
+}
+
+/* On s'assure que le titre et les paragraphes prennent plus de place */
+.connect-hero h1 {
+    font-size: 3rem; /* On peut aussi agrandir le titre */
+}
+.connect-hero .tagline {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin: 0 0 1rem 0;
+    max-width: 65ch; /* On augmente la largeur maximale */
+    text-align: center;
+}
+.connect-hero p {
+    max-width: 65ch;
+    margin: 0;
+    text-align: center;
+}
+
+/* --- Section Problème/Solution en Cartes --- */
+.problem-solution-section h2, .problem-solution-section h3 {
+    text-align: center;
+}
+
+.problem-solution-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Nouvelle liste pour les plateformes */
+.platform-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 1rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.platform-list li {
+    margin-bottom: 0.5rem;
+}
+
+/* --- Barre de Progression et Compteur (déjà présent mais vérifiez) --- */
+.funding-box {
+    text-align: center;
+    background-color: var(--card-bg-color);
+    backdrop-filter: blur(15px);
+    border: 1px solid var(--card-border-color);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+}
+
+.progress-bar-container {
+    width: 100%;
+    height: 30px;
+    background-color: var(--bg-color); /* Fond plus sombre pour le contraste */
+    border-radius: 15px;
+    margin-top: 1.5rem;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.progress-bar-fill {
+    height: 100%;
+    width: 0%; /* Sera modifié par JavaScript */
+    background-image: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
+    border-radius: 15px;
+    transition: width 1.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.progress-text {
+    margin-top: 1rem;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+/* --- Organisation des boutons dans la navbar --- */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* Espace entre les deux boutons */
+}
+
+/* --- Style du nouveau bouton "PLYIA Connect" --- */
+.nav-cta-special {
+    background-image: linear-gradient(90deg, var(--accent-purple), var(--accent-blue));
+    color: white;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+    overflow: hidden; /* Nécessaire pour l'effet "shine" */
+}
+
+/* --- L'effet "Shine" au survol --- */
+.nav-cta-special::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.4),
+        transparent
+    );
+    transition: left 0.6s ease;
+}
+
+.nav-cta-special:hover::before {
+    left: 100%;
+}
+
+.nav-cta-special:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(91, 29, 179, 0.4);
+    color: white;
+}
+
+/* --- Style pour le lien actif sur le bouton spécial --- */
+.nav-cta-special.active-link {
+    box-shadow: 0 0 15px var(--accent-blue);
+    border: 1px solid var(--accent-blue);
+}
+
+.philosophy-card p {
+    flex-grow: 0; /* On ajuste le comportement flex pour que la liste ne soit pas poussée en bas */
+}
+
+.vision-accordion {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.vision-card {
+    transition: all 0.4s ease-out; /* Transition douce pour la taille et la bordure */
+}
+
+.vision-card-toggle {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    text-align: left;
+}
+
+/* Style de l'icône + / - */
+.vision-card-toggle::after {
+    content: '+';
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: var(--text-muted-color);
+    transition: transform 0.3s ease-out;
+}
+.vision-card.active .vision-card-toggle::after {
+    content: '-';
+}
+
+/* Le contenu qui sera caché/affiché */
+.vision-card-content {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.5s ease-in-out, opacity 0.3s ease-in-out, padding-top 0.5s ease-in-out;
+}
+
+/* Styles pour la carte quand elle est OUVERTE */
+.vision-card.active {
+    border-color: var(--card-hover-border-color) !important;
+}
+
+.vision-card.active .vision-card-content {
+    max-height: 500px; /* Hauteur suffisante pour le contenu */
+    opacity: 1;
+    padding-top: 1.5rem; /* Espace après le titre */
+    border-top: 1px solid var(--card-border-color);
+    margin-top: 1rem;
+}
+
+.vision-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 1.5rem;
+}
+.vision-list li {
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+.vision-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--accent-blue);
+    font-weight: 700;
+}
+
+.connect-teaser-merged {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 colonne sur mobile */
+    gap: 2rem;
+    align-items: center;
+    text-align: center; /* Centré par défaut pour mobile */
+}
+/* Passage à 2 colonnes sur les écrans plus larges */
+@media (min-width: 768px) {
+    .connect-teaser-merged {
+        grid-template-columns: 1fr 2fr;
+        text-align: left;
+    }
+}
+
+.connect-teaser-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.connect-teaser-logo img {
+    width: 250px;
+    height: auto;
+    opacity: 0.9;
+}
+
+.connect-teaser-text p {
+    text-align: inherit; /* Hérite de l'alignement du parent */
+    margin: 0 0 1.5rem 0;
+    max-width: 55ch;
+}
+
+/* Le bouton qui contient le titre et l'icône + */
+.retractable-toggle {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: inherit;
+}
+.retractable-toggle p {
+    margin: 0; /* On enlève la marge par défaut des paragraphes */
+}
+
+/* L'icône + / x */
+.toggle-icon {
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--text-muted-color);
+    transition: transform 0.3s ease-out;
+}
+
+/* Le contenu qui est caché/affiché */
+.retractable-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding-top 0.4s ease-out;
+}
+.retractable-content p {
+    padding-left: 24px; /* On décale le texte pour l'aligner sous le titre */
+    font-size: 0.9rem;
+    margin-top: 0.8rem;
+}
+.retractable-content p:first-child {
+    margin-top: 1rem; /* Espace après le titre */
+}
+
+
+/* -- Styles pour l'état OUVERT -- */
+.retractable-spec.active .retractable-content {
+    max-height: 200px; /* Hauteur suffisante pour le contenu */
+}
+
+.retractable-spec.active .toggle-icon {
+    transform: rotate(45deg); /* Transforme le '+' en 'x' */
 }

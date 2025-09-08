@@ -56,22 +56,31 @@
     <!-- End Google Tag Manager (noscript) -->
     <div class="blur-orb" id="orb1"></div>
     <div class="blur-orb" id="orb2"></div>
+
     <nav class="navbar">
         <div class="nav-container">
             <a href="../index.html" class="nav-logo"><img src="../images/PLYIA_Icon.png" alt="PLYIA Logo"><span>PLYIA</span></a>
             <ul class="nav-links">
                 <li><a href="../index.html#produits">Produits</a></li>
-                <li><a href="../index.html#philosophie">Philosophie</a></li>
+                <li><a href="../index.html#vision">Notre Vision</a></li>
                 <li><a href="../index.html#roadmap">Roadmap</a></li>
             </ul>
-            <a href="/contact.html" class="nav-cta">Contact</a>
+            <div class="nav-actions">
+                <a href="plyia_connect.html" class="nav-cta-special">PLYIA Connect</a>
+                <a href="../contact.html" class="nav-cta">Contact</a>
+            </div>
         </div>
     </nav>
 
     <main class="product-detail-page">
         <header class="product-hero-container">
-            <a href="../index.html" class="back-link">← Retour à l'accueil</a>
-            <h1>Pulse Editor</h1>
+            <a href="../index.html#produits" class="back-link">← Retour aux produits</a>
+            
+            <div class="product-title-group">
+                <img src="../images/product_icons/PulseEditor_Icon.png" alt="Icône Pulse Editor" class="product-hero-icon">
+                <h1>Pulse Editor</h1>
+            </div>
+            
             <p class="tagline">L'éditeur de texte IA minimaliste pour des tâches atomiques : reformuler, corriger, résumer.</p>
         </header>
 
@@ -139,17 +148,17 @@
                 </ul>
             </section>
 
+            <div class="usage-tips-box">
+                <h3>💡 Conseil d'Utilisation : La Règle d'Or du Contexte</h3>
+                <p>Comme toute IA, Pulse Editor donne les meilleurs résultats lorsque vous lui fournissez un contexte suffisant. L'outil est conçu pour travailler sur des phrases complètes ou des paragraphes. Si vous lui donnez des bribes de phrases très courtes et ambiguës, le modèle peut "halluciner" et inventer un contexte erroné. Pour une efficacité maximale, assurez-vous que votre texte d'entrée contient au moins 20 à 30 mots.</p>
+            </div>
+
             <section class="full-width-section">
                 <h2>Performance</h2>
                 <div class="performance-graph-container">
                     <svg width="100%" viewBox="0 0 500 250" class="performance-graph"><rect width="500" height="250" fill="var(--card-bg-color)" rx="12"></rect><g class="grid" stroke="rgba(255, 255, 255, 0.1)" stroke-width="1"><line x1="50" y1="50" x2="50" y2="200"></line><line x1="50" y1="200" x2="450" y2="200"></line></g><g class="labels" fill="var(--text-muted-color)" font-size="12" font-family="var(--font-family)"><text x="40" y="50" dy="4" text-anchor="end">100%</text><text x="40" y="125" dy="4" text-anchor="end">50%</text><text x="40" y="200" dy="4" text-anchor="end">0%</text><text x="15" y="125" transform="rotate(-90, 15, 125)" text-anchor="middle">Efficacité</text><text x="100" y="220" text-anchor="middle">50</text><text x="250" y="220" text-anchor="middle">500</text><text x="400" y="220" text-anchor="middle">1000+</text><text x="250" y="240" text-anchor="middle" font-weight="700">Nombre de mots</text></g><path d="M 50 195 C 120 120, 200 75, 250 75 S 400 80, 450 85" fill="none" stroke="var(--accent-blue)" stroke-width="3" stroke-linecap="round" class="performance-curve"></path><g class="data-points"><circle class="data-point" r="6" data-position="0.3" data-words="~50 mots" data-effectiveness="95%" data-info="Correction d'un e-mail."></circle><circle class="data-point" r="6" data-position="0.5" data-words="~500 mots" data-effectiveness="95%" data-info="Résumé d'un article."></circle><circle class="data-point" r="6" data-position="0.88" data-words="~1000 mots" data-effectiveness="82%" data-info="Nettoyage d'un premier jet."></circle></g><g id="tooltip" visibility="hidden"><rect id="tooltip-bg" height="75" rx="8" fill="rgba(0,0,0,0.8)" stroke="var(--accent-blue)"></rect><text id="tooltip-line1" x="10" y="25" font-size="14" font-weight="700" fill="var(--text-color)"></text><text id="tooltip-line2" x="10" y="45" font-size="12" fill="var(--text-color)"></text><text id="tooltip-line3" x="10" y="60" font-size="12" fill="var(--text-muted-color)"></text></g></svg>
                 </div>
             </section>
-            
-            <div class="usage-tips-box">
-                <h3>💡 Conseil d'Utilisation : La Règle d'Or du Contexte</h3>
-                <p>Comme toute IA, Pulse Editor donne les meilleurs résultats lorsque vous lui fournissez un contexte suffisant. L'outil est conçu pour travailler sur des phrases complètes ou des paragraphes. Si vous lui donnez des bribes de phrases très courtes et ambiguës, le modèle peut "halluciner" et inventer un contexte erroné. Pour une efficacité maximale, assurez-vous que votre texte d'entrée contient au moins 20 à 30 mots.</p>
-            </div>
 
             <div class="disclaimer-box">
                 <h3>⚠️ Transparence : Modèles, Performances et Installation</h3>
@@ -179,7 +188,7 @@
             <p>Avant de finaliser, merci de vérifier que votre machine est compatible avec Pulse Editor. Vous pouvez effectuer un test rapide directement sur cette page.</p>
             <div class="modal-actions">
                 <button id="modal-scroll-to-test" class="modal-button secondary">Faire le test</button>
-                <a href="#" class="lemonsqueezy-button modal-button primary">Acheter quand même</a>
+                <a href="https://plyia.lemonsqueezy.com/buy/9bd5c562-994e-43d7-aaa7-7f44c0f847ac?embed=1" class="lemonsqueezy-button modal-button primary">Acheter quand même</a>
             </div>
         </div>
     </div>
@@ -194,12 +203,12 @@
             </a>
         </div>
         <div class="footer-links">
-            <a href="/legal/privacy.html">Politique de Confidentialité</a>
-            <a href="/legal/terms.html">Conditions Générales de Vente</a>
-            <a href="/legal/refund.html">Politique de Remboursement</a>
-            <a href="/faq.html">FAQ</a>
-            <a href="/contact.html">Contact</a>
-            <a href="/legal/mentions-legales.html">Mentions Légales</a>
+            <a href="../legal/privacy.html">Politique de Confidentialité</a>
+            <a href="../legal/terms.html">Conditions Générales de Vente</a>
+            <a href="../legal/refund.html">Politique de Remboursement</a>
+            <a href="../faq.html">FAQ</a>
+            <a href="../contact.html">Contact</a>
+            <a href="../legal/mentions-legales.html">Mentions Légales</a>
         </div>
         <p>© 2025 PLYIA - Tous droits réservés.</p>
     </footer>
@@ -289,10 +298,14 @@
                 
                 // NOTE: Pensez à remplacer le lien placeholder ci-dessous
                 if (conclusionClass === 'result-sufficient' || conclusionClass === 'result-optimal') {
-                    finalHTML += `<a href="#" class="lemonsqueezy-button cta-button" style="margin-top: 1.5rem; display: block;">Acheter Pulse Editor</a>`;
+                    finalHTML += `<a href="https://plyia.lemonsqueezy.com/buy/9bd5c562-994e-43d7-aaa7-7f44c0f847ac?embed=1" class="lemonsqueezy-button modal-button primary" style="margin-top: 1.5rem; display: block;">Acheter Pulse Editor</a>`;
                 }
                 
                 testResultsDiv.innerHTML = finalHTML;
+
+                if (window.LemonSqueezy) {
+                    LemonSqueezy.Refresh();
+                }
             };
 
             const showManualTest = () => {

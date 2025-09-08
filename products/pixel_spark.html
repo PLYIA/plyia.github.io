@@ -55,23 +55,32 @@
     <!-- End Google Tag Manager (noscript) -->
     <div class="blur-orb" id="orb1"></div>
     <div class="blur-orb" id="orb2"></div>
+
     <nav class="navbar">
         <div class="nav-container">
             <a href="../index.html" class="nav-logo"><img src="../images/PLYIA_Icon.png" alt="PLYIA Logo"><span>PLYIA</span></a>
             <ul class="nav-links">
                 <li><a href="../index.html#produits">Produits</a></li>
-                <li><a href="../index.html#philosophie">Philosophie</a></li>
+                <li><a href="../index.html#vision">Notre Vision</a></li>
                 <li><a href="../index.html#roadmap">Roadmap</a></li>
             </ul>
-            <a href="/contact.html" class="nav-cta">Contact</a>
+            <div class="nav-actions">
+                <a href="plyia_connect.html" class="nav-cta-special">PLYIA Connect</a>
+                <a href="../contact.html" class="nav-cta">Contact</a>
+            </div>
         </div>
     </nav>
 
     <main class="product-detail-page">
         <header class="product-hero-container">
-            <a href="../index.html" class="back-link">← Retour à l'accueil</a>
-            <h1>Pixel Spark</h1>
-            <p class="tagline">Votre studio de création d'images IA. Puissant, privé et sans limites.</p>
+            <a href="../index.html#produits" class="back-link">← Retour aux produits</a>
+            
+            <div class="product-title-group">
+                <img src="../images/product_icons/PixelSpark_Icon.png" alt="Icône Pixel Spark" class="product-hero-icon">
+                <h1>Pixel Spark</h1>
+            </div>
+            
+            <p class="tagline">Générateur d'images photoréalistes et artistiques de haute qualité, avec support des LoRA.</p>
         </header>
 
         <div class="product-showcase-grid">
@@ -209,7 +218,7 @@
             <p>Pixel Spark est fortement recommandé avec une <strong>carte graphique (GPU) NVIDIA avec au moins 8 Go de VRAM</strong>. Veuillez effectuer le test.</p>
             <div class="modal-actions">
                 <button id="modal-scroll-to-test" class="modal-button secondary">Faire le test</button>
-                <a href="#" class="lemonsqueezy-button modal-button primary">Acheter quand même</a>
+                <a href="https://plyia.lemonsqueezy.com/buy/9c9530b9-f9cb-41cd-89aa-2b8ff0567260?embed=1" class="lemonsqueezy-button modal-button primary">Acheter quand même</a>
             </div>
         </div>
     </div>
@@ -224,12 +233,12 @@
             </a>
         </div>
         <div class="footer-links">
-            <a href="/legal/privacy.html">Politique de Confidentialité</a>
-            <a href="/legal/terms.html">Conditions Générales de Vente</a>
-            <a href="/legal/refund.html">Politique de Remboursement</a>
-            <a href="/faq.html">FAQ</a>
-            <a href="/contact.html">Contact</a>
-            <a href="/legal/mentions-legales.html">Mentions Légales</a>
+            <a href="../legal/privacy.html">Politique de Confidentialité</a>
+            <a href="../legal/terms.html">Conditions Générales de Vente</a>
+            <a href="../legal/refund.html">Politique de Remboursement</a>
+            <a href="../faq.html">FAQ</a>
+            <a href="../contact.html">Contact</a>
+            <a href="../legal/mentions-legales.html">Mentions Légales</a>
         </div>
         <p>© 2025 PLYIA - Tous droits réservés.</p>
     </footer>
@@ -300,10 +309,14 @@
                 let finalHTML = `<div class="result-line"><strong>Carte Graphique :</strong> ${gpuVerdict}</div><div class="result-line"><strong>Mémoire VRAM :</strong> ${vram} Go (Requis: ${requiredVram} Go)</div><div class="result-line"><strong>Coeurs CPU :</strong> ${cores} (Recommandé en mode CPU: ${requiredCores}+)</div><div class="result-line"><strong>Mémoire RAM :</strong> ${ram} Go (Recommandé: ${recommendedRam} Go)</div><div class="result-conclusion ${conclusionClass}">${conclusionText}</div>`;
                 
                 if (conclusionClass === 'result-sufficient' || conclusionClass === 'result-optimal') {
-                    finalHTML += `<a href="#" class="lemonsqueezy-button cta-button" style="margin-top: 1.5rem; display: block;">Acheter Pixel Spark</a>`;
+                    finalHTML += `<a href="https://plyia.lemonsqueezy.com/buy/9c9530b9-f9cb-41cd-89aa-2b8ff0567260?embed=1" class="lemonsqueezy-button modal-button primary" style="margin-top: 1.5rem; display: block;">Acheter Pixel Spark</a>`;
                 }
 
                 testResultsDiv.innerHTML = finalHTML;
+
+                if (window.LemonSqueezy) {
+                    LemonSqueezy.Refresh();
+                }
             };
 
             const showManualTest = (detectedGpuVendor, detectedCores, detectedRam) => {

@@ -4,7 +4,7 @@
   <!-- Page Principale -->
   <url>
     <loc>https://plyia.fr/</loc>
-    <lastmod>2025-09-03</lastmod>
+    <lastmod>2025-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -12,19 +12,25 @@
   <!-- Pages Produits -->
   <url>
     <loc>https://plyia.fr/products/kortex_chat.html</loc>
-    <lastmod>2025-09-03</lastmod>
+    <lastmod>2025-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://plyia.fr/products/pixel_spark.html</loc>
-    <lastmod>2025-09-03</lastmod>
+    <lastmod>2025-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://plyia.fr/products/pulse_editor.html</loc>
-    <lastmod>2025-09-03</lastmod>
+    <lastmod>2025-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://plyia.fr/products/plyia_connect.html</loc>
+    <lastmod>2025-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -32,13 +38,13 @@
   <!-- Pages de Confiance et Support -->
   <url>
     <loc>https://plyia.fr/faq.html</loc>
-    <lastmod>2025-09-03</lastmod>
+    <lastmod>2025-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://plyia.fr/contact.html</loc>
-    <lastmod>2025-09-03</lastmod>
+    <lastmod>2025-09-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -46,25 +52,25 @@
   <!-- Pages Légales -->
   <url>
     <loc>https://plyia.fr/legal/terms.html</loc>
-    <lastmod>2025-09-03</lastmod>
+    <lastmod>2025-09-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://plyia.fr/legal/privacy.html</loc>
-    <lastmod>2025-09-03</lastmod>
+    <lastmod>2025-09-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://plyia.fr/legal/refund.html</loc>
-    <lastmod>2025-09-03</lastmod>
+    <lastmod>2025-09-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://plyia.fr/legal/mentions-legales.html</loc>
-    <lastmod>2025-09-03</lastmod>
+    <lastmod>2025-09-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>

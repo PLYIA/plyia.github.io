@@ -56,57 +56,98 @@
     <!-- End Google Tag Manager (noscript) -->
     <div class="blur-orb" id="orb1"></div>
     <div class="blur-orb" id="orb2"></div>
+
     <nav class="navbar">
         <div class="nav-container">
             <a href="../index.html" class="nav-logo"><img src="../images/PLYIA_Icon.png" alt="PLYIA Logo"><span>PLYIA</span></a>
             <ul class="nav-links">
                 <li><a href="../index.html#produits">Produits</a></li>
-                <li><a href="../index.html#philosophie">Philosophie</a></li>
+                <li><a href="../index.html#vision">Notre Vision</a></li>
                 <li><a href="../index.html#roadmap">Roadmap</a></li>
             </ul>
-            <a href="/contact.html" class="nav-cta">Contact</a>
+            <div class="nav-actions">
+                <a href="plyia_connect.html" class="nav-cta-special">PLYIA Connect</a>
+                <a href="../contact.html" class="nav-cta">Contact</a>
+            </div>
         </div>
     </nav>
 
     <main class="product-detail-page">
         <header class="product-hero-container">
-            <a href="../index.html" class="back-link">← Retour à l'accueil</a>
-            <h1>Kortex Chat</h1>
-            <p class="tagline">L'assistant IA qui vit sur votre ordinateur. Confidentiel, puissant et multifonction.</p>
+            <a href="../index.html#produits" class="back-link">← Retour aux produits</a>
+            
+            <div class="product-title-group">
+                <img src="../images/product_icons/KortexChat_Icon.png" alt="Icône Kortex Chat" class="product-hero-icon">
+                <h1>Kortex Chat</h1>
+            </div>
+            
+            <p class="tagline">Votre assistant IA local et privé, capable d'analyser documents, images et de faire des recherches web.</p>
         </header>
+            <div class="product-showcase-grid">
+                <!-- COLONNE DE GAUCHE : LE CARROUSEL -->
+                <div class="product-gallery-container">
+                    <div class="product-gallery">
+                        <div class="slider-wrapper">
+                            <div class="slider-container">
+                                <div class="slide"><img src="../images/screenshots/kortex_chat_live_preview.gif" alt="Démonstration de Kortex Chat" onclick="openLightbox(this)"></div>
+                                <div class="slide"><img src="../images/screenshots/kortex_chat_screenshot1.jpg" alt="Interface de Kortex Chat" onclick="openLightbox(this)"></div>
+                                <div class="slide"><img src="../images/screenshots/kortex_chat_screenshot2.jpg" alt="Analyse de PDF" onclick="openLightbox(this)"></div>
+                                <div class="slide"><img src="../images/screenshots/kortex_chat_screenshot3.jpg" alt="Analyse d'image" onclick="openLightbox(this)"></div>
+                                <div class="slide"><img src="../images/screenshots/kortex_chat_screenshot4.jpg" alt="Interface détaillée de Kortex Chat" onclick="openLightbox(this)"></div>
+                            </div>
+                        </div>
+                        <button class="slider-arrow prev" onclick="moveSlide(-1)">&#10094;</button>
+                        <button class="slider-arrow next" onclick="moveSlide(1)">&#10095;</button>
+                        <div class="slider-nav"></div>
+                    </div>
+                </div>
 
-        <div class="product-showcase-grid">
-            <div class="product-gallery-container">
-                <div class="product-gallery">
-                    <div class="slider-wrapper">
-                        <div class="slider-container">
-                            <div class="slide"><img src="../images/screenshots/kortex_chat_live_preview.gif" alt="Démonstration de Kortex Chat" onclick="openLightbox(this)"></div>
-                            <div class="slide"><img src="../images/screenshots/kortex_chat_screenshot1.jpg" alt="Capture d'écran 1 de Kortex Chat" onclick="openLightbox(this)"></div>
-                            <div class="slide"><img src="../images/screenshots/kortex_chat_screenshot2.jpg" alt="Capture d'écran 2 de Kortex Chat" onclick="openLightbox(this)"></div>
-                            <div class="slide"><img src="../images/screenshots/kortex_chat_screenshot3.jpg" alt="Capture d'écran 3 de Kortex Chat" onclick="openLightbox(this)"></div>
-                            <div class="slide"><img src="../images/screenshots/kortex_chat_screenshot4.jpg" alt="Capture d'écran 4 de Kortex Chat" onclick="openLightbox(this)"></div>
+                <!-- COLONNE DE DROITE : ACHAT & PRÉREQUIS -->
+                <div class="product-info-container">
+                    <div class="buy-box">
+                        <span class="price-detail">27 € - Licence à Vie</span>
+                        <a href="#" id="open-modal-btn" class="cta-button">Acheter Kortex Chat</a>
+                    </div>
+                    
+                    <div class="specs-box">
+                        <div class="os-spec-group retractable-spec active">
+                            <button class="retractable-toggle">
+                                <p><strong><img src="../images/linux_icon.png" class="os-icon" alt="Linux Logo"> Pour Linux (Recommandé)</strong></p>
+                                <span class="toggle-icon">+</span>
+                            </button>
+                            <div class="retractable-content">
+                                <p><strong>Modèles IA :</strong> <strong>Llama-3.2</strong>, MiniCPM-V-2.6</p>
+                                <p><strong>Mode GPU :</strong> 10 Go+ VRAM | 16 Go RAM</p>
+                                <p><strong>Mode CPU :</strong> 32 Go RAM | CPU 8 cœurs</p>
+                            </div>
+                        </div>
+                        <div class="os-spec-group retractable-spec">
+                            <button class="retractable-toggle">
+                                <p><strong><img src="../images/windows_icon.png" class="os-icon" alt="Windows Logo"> Pour Windows</strong></p>
+                                <span class="toggle-icon">+</span>
+                            </button>
+                            <div class="retractable-content">
+                                <p><strong>Modèle IA :</strong> <strong>Llama-2-7B</strong> (limitation technique)</p>
+                                <p><strong>Configuration :</strong> <strong style="color: #ff8a8a;">CPU Only</strong></p>
+                                <p><strong>Prérequis :</strong> 16 Go+ RAM | CPU 8 cœurs</p>
+                            </div>
                         </div>
                     </div>
-                    <button class="slider-arrow prev" onclick="moveSlide(-1)">&#10094;</button>
-                    <button class="slider-arrow next" onclick="moveSlide(1)">&#10095;</button>
-                    <div class="slider-nav"></div>
                 </div>
             </div>
-
-            <div class="product-info-container">
-                <div class="buy-box">
-                    <span class="price-detail">27 € - Licence à Vie</span>
-                    <a href="#" id="open-modal-btn" class="cta-button">Acheter Kortex Chat</a>
-                </div>
-                <div class="specs-box">
-                    <h3>Prérequis Techniques</h3>
-                    <p><strong>Modèles IA :</strong> Llama-3.2-8B, MiniCPM-V-2.6</p>
-                    <p><strong>Configuration :</strong> CPU / GPU (Flexible)</p>
-                    <p><strong>Mode GPU :</strong> <strong>10 Go+ VRAM</strong> | 16 Go RAM</p>
-                    <p><strong>Mode CPU :</strong> <strong>32 Go RAM</strong> | CPU 8 cœurs</p>
-                </div>
+            <div class="disclaimer-box" style="text-align: left; max-width: 900px; margin: 2rem auto;">
+                <h3>⚠️ Note Importante : Différences entre Windows et Linux</h3>
+                <p>
+                    L'écosystème de l'IA locale évolue rapidement. Sur Linux, l'intégration des derniers modèles et du matériel est fluide et stable. Cependant, l'environnement Windows présente actuellement des défis techniques majeurs qui rendent instables l'utilisation des architectures les plus récentes (comme Llama 3.2) et l'accélération GPU pour un usage grand public.
+                </p>
+                <p style="margin-top: 1rem;">
+                    Par souci de stabilité, la version Windows de Kortex Chat est donc actuellement limitée au modèle <strong>Llama-2-7B</strong> et fonctionne en mode <strong>CPU uniquement</strong>.
+                </p>
+                <p style="margin-top: 1rem; font-weight: 600; background-color: rgba(58, 125, 255, 0.1); padding: 1rem; border-radius: 8px;">
+                    Pour profiter à 100% du potentiel de Kortex Chat, avec les modèles les plus récents et l'accélération GPU, <strong>nous recommandons vivement d'utiliser la version Linux.</strong><br><br>
+                    Notre équipe travaille activement à une solution pour Windows. Si vous possédez une licence, vous serez bien sûr informé et bénéficierez de la mise à jour dès qu'elle sera disponible.
+                </p>
             </div>
-        </div>
 
         <section class="full-width-section simple-steps-section" style="padding-top: 4rem; padding-bottom: 4rem;">
             <h2>Votre IA Prête en 3 Étapes</h2>
@@ -172,6 +213,7 @@
 
             <section id="compatibility-test" class="compatibility-section">
                 <h2>Test de Compatibilité Rapide</h2>
+                <p>Ce test analyse les informations de votre navigateur pour une estimation. <strong>Les prérequis étant différents, merci de vous référer à la configuration Windows ou Linux détaillée ci-dessus.</strong></p>
                 <div id="test-box">
                     <button id="run-test-btn" class="cta-button">Lancer le Test (CPU & RAM)</button>
                     <div id="test-results" class="results-container"></div>
@@ -188,7 +230,7 @@
             <p>Kortex Chat fonctionne mieux avec un GPU, mais peut aussi utiliser votre CPU si vous avez assez de RAM. Veuillez vérifier votre configuration.</p>
             <div class="modal-actions">
                 <button id="modal-scroll-to-test" class="modal-button secondary">Faire le test</button>
-                <a href="#" class="lemonsqueezy-button modal-button primary">Acheter quand même</a>
+                <a href="https://plyia.lemonsqueezy.com/buy/4c942e7d-aafb-4d6e-87eb-8184f832c2dc?embed=1" class="lemonsqueezy-button modal-button primary">Acheter quand même</a>
             </div>
         </div>
     </div>
@@ -203,12 +245,12 @@
             </a>
         </div>
         <div class="footer-links">
-            <a href="/legal/privacy.html">Politique de Confidentialité</a>
-            <a href="/legal/terms.html">Conditions Générales de Vente</a>
-            <a href="/legal/refund.html">Politique de Remboursement</a>
-            <a href="/faq.html">FAQ</a>
-            <a href="/contact.html">Contact</a>
-            <a href="/legal/mentions-legales.html">Mentions Légales</a>
+            <a href="../legal/privacy.html">Politique de Confidentialité</a>
+            <a href="../legal/terms.html">Conditions Générales de Vente</a>
+            <a href="../legal/refund.html">Politique de Remboursement</a>
+            <a href="../faq.html">FAQ</a>
+            <a href="../contact.html">Contact</a>
+            <a href="../legal/mentions-legales.html">Mentions Légales</a>
         </div>
         <p>© 2025 PLYIA - Tous droits réservés.</p>
     </footer>
@@ -301,10 +343,14 @@
                 
                 // NOTE: Pensez à remplacer le lien placeholder ci-dessous
                 if (conclusionClass === 'result-sufficient' || conclusionClass === 'result-optimal') {
-                    finalHTML += `<a href="#" class="lemonsqueezy-button cta-button" style="margin-top: 1.5rem; display: block;">Acheter Kortex Chat</a>`;
+                    finalHTML += `<a href="https://plyia.lemonsqueezy.com/buy/4c942e7d-aafb-4d6e-87eb-8184f832c2dc?embed=1" class="lemonsqueezy-button modal-button primary" style="margin-top: 1.5rem; display: block;">Acheter Kortex Chat</a>`;
                 }
 
                 testResultsDiv.innerHTML = finalHTML;
+
+                if (window.LemonSqueezy) {
+                    LemonSqueezy.Refresh();
+                }
             };
 
             const showManualTest = () => {
@@ -351,7 +397,16 @@
             scrollTopBtn.addEventListener('click', () => {
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             });
+            const specToggles = document.querySelectorAll('.retractable-toggle');
 
+            specToggles.forEach(toggle => {
+                toggle.addEventListener('click', () => {
+                    const parentSpecGroup = toggle.closest('.retractable-spec');
+                    if (parentSpecGroup) {
+                        parentSpecGroup.classList.toggle('active');
+                    }
+                });
+            });
         });
     </script>
 </body>
