@@ -230,7 +230,7 @@
             <p>Kortex Chat fonctionne mieux avec un GPU, mais peut aussi utiliser votre CPU si vous avez assez de RAM. Veuillez vérifier votre configuration.</p>
             <div class="modal-actions">
                 <button id="modal-scroll-to-test" class="modal-button secondary">Faire le test</button>
-                <a href="https://plyia.lemonsqueezy.com/buy/4c942e7d-aafb-4d6e-87eb-8184f832c2dc?embed=1" class="lemonsqueezy-button modal-button primary">Acheter quand même</a>
+                <a id="modal-confirm-purchase" href="https://plyia.gumroad.com/l/kortex_chat" class="modal-button primary">Acheter quand même</a>
             </div>
         </div>
     </div>
@@ -255,7 +255,7 @@
         <p>© 2025 PLYIA - Tous droits réservés.</p>
     </footer>
 
-    <script src="https://assets.lemonsqueezy.com/lemon.js" defer></script>
+    <script src="https://gumroad.com/js/gumroad.js" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // --- SECTION 1: CARROUSEL ---
@@ -343,7 +343,7 @@
                 
                 // NOTE: Pensez à remplacer le lien placeholder ci-dessous
                 if (conclusionClass === 'result-sufficient' || conclusionClass === 'result-optimal') {
-                    finalHTML += `<a href="https://plyia.lemonsqueezy.com/buy/4c942e7d-aafb-4d6e-87eb-8184f832c2dc?embed=1" class="lemonsqueezy-button modal-button primary" style="margin-top: 1.5rem; display: block;">Acheter Kortex Chat</a>`;
+                    finalHTML += `<a id="modal-confirm-purchase" href="https://plyia.gumroad.com/l/kortex_chat" class="modal-button primary" style="margin-top: 1.5rem; display: block;">Acheter Kortex Chat</a>`;
                 }
 
                 testResultsDiv.innerHTML = finalHTML;

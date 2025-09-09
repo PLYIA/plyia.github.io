@@ -218,7 +218,7 @@
             <p>Pixel Spark est fortement recommandé avec une <strong>carte graphique (GPU) NVIDIA avec au moins 8 Go de VRAM</strong>. Veuillez effectuer le test.</p>
             <div class="modal-actions">
                 <button id="modal-scroll-to-test" class="modal-button secondary">Faire le test</button>
-                <a href="https://plyia.lemonsqueezy.com/buy/9c9530b9-f9cb-41cd-89aa-2b8ff0567260?embed=1" class="lemonsqueezy-button modal-button primary">Acheter quand même</a>
+                <a id="modal-confirm-purchase" href="https://plyia.gumroad.com/l/pixel_spark" class="modal-button primary">Acheter quand même</a>
             </div>
         </div>
     </div>
@@ -245,7 +245,7 @@
 
     <button id="scrollTopBtn" title="Retour en haut">↑</button>
 
-    <script src="https://assets.lemonsqueezy.com/lemon.js" defer></script>
+    <script src="https://gumroad.com/js/gumroad.js" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // --- SECTION 1: CARROUSEL ---
@@ -309,7 +309,7 @@
                 let finalHTML = `<div class="result-line"><strong>Carte Graphique :</strong> ${gpuVerdict}</div><div class="result-line"><strong>Mémoire VRAM :</strong> ${vram} Go (Requis: ${requiredVram} Go)</div><div class="result-line"><strong>Coeurs CPU :</strong> ${cores} (Recommandé en mode CPU: ${requiredCores}+)</div><div class="result-line"><strong>Mémoire RAM :</strong> ${ram} Go (Recommandé: ${recommendedRam} Go)</div><div class="result-conclusion ${conclusionClass}">${conclusionText}</div>`;
                 
                 if (conclusionClass === 'result-sufficient' || conclusionClass === 'result-optimal') {
-                    finalHTML += `<a href="https://plyia.lemonsqueezy.com/buy/9c9530b9-f9cb-41cd-89aa-2b8ff0567260?embed=1" class="lemonsqueezy-button modal-button primary" style="margin-top: 1.5rem; display: block;">Acheter Pixel Spark</a>`;
+                    finalHTML += `<a id="modal-confirm-purchase" href="https://plyia.gumroad.com/l/pixel_spark" class="modal-button primary" style="margin-top: 1.5rem; display: block;">Acheter Pixel Spark</a>`;
                 }
 
                 testResultsDiv.innerHTML = finalHTML;

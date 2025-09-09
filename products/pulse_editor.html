@@ -188,7 +188,7 @@
             <p>Avant de finaliser, merci de vérifier que votre machine est compatible avec Pulse Editor. Vous pouvez effectuer un test rapide directement sur cette page.</p>
             <div class="modal-actions">
                 <button id="modal-scroll-to-test" class="modal-button secondary">Faire le test</button>
-                <a href="https://plyia.lemonsqueezy.com/buy/9bd5c562-994e-43d7-aaa7-7f44c0f847ac?embed=1" class="lemonsqueezy-button modal-button primary">Acheter quand même</a>
+                <a id="modal-confirm-purchase" href="https://plyia.gumroad.com/l/pulse_editor" class="modal-button primary">Acheter quand même</a>
             </div>
         </div>
     </div>
@@ -213,7 +213,7 @@
         <p>© 2025 PLYIA - Tous droits réservés.</p>
     </footer>
 
-    <script src="https://assets.lemonsqueezy.com/lemon.js" defer></script>
+    <script src="https://gumroad.com/js/gumroad.js" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // --- SECTION 1: CARROUSEL ---
@@ -298,7 +298,7 @@
                 
                 // NOTE: Pensez à remplacer le lien placeholder ci-dessous
                 if (conclusionClass === 'result-sufficient' || conclusionClass === 'result-optimal') {
-                    finalHTML += `<a href="https://plyia.lemonsqueezy.com/buy/9bd5c562-994e-43d7-aaa7-7f44c0f847ac?embed=1" class="lemonsqueezy-button modal-button primary" style="margin-top: 1.5rem; display: block;">Acheter Pulse Editor</a>`;
+                    finalHTML += `<a id="modal-confirm-purchase" href="https://plyia.gumroad.com/l/pulse_editor" class="modal-button primary" style="margin-top: 1.5rem; display: block;">Acheter Pulse Editor</a>`;
                 }
                 
                 testResultsDiv.innerHTML = finalHTML;
