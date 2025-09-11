@@ -4,14 +4,14 @@
 <h1 align="center">Site Web de PLYIA</h1>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Statut-En%20Développement%20(WIP)-orange" alt="Statut du Projet">
+  <img src="https://img.shields.io/badge/Statut-Terminé%20%26%20Ouvert-brightgreen" alt="Statut du Projet">
 </p>
 
 <p align="center">
   Ceci est le dépôt officiel pour le site web de <strong>PLYIA</strong>, une suite de logiciels d'Intelligence Artificielle 100% privés, conçus pour fonctionner localement sur votre machine, sans abonnement ni espionnage.
 </p>
 
-> **🔗 Voir le site en direct : [plyia.fr](https://plyia.github.io)**
+> **🔗 Découvrez le site en ligne : [plyia.fr](https://plyia.github.io)**
 
 ---
 
@@ -27,6 +27,6 @@ Aucun framework n'est utilisé afin de garantir une légèreté et une vitesse d
 
 ---
 
-## 🚧 Statut du Projet (Work In Progress)
+## ✅ Statut du Projet
 
-Ce site est actuellement en **phase de développement actif**. Bien que les pages principales soient fonctionnelles, plusieurs améliorations sont prévues.
+Le site est maintenant **terminé et officiellement ouvert**. Toutes les pages et fonctionnalités sont stables et accessibles au public.
