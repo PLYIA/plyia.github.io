@@ -1,16 +1,18 @@
+--- START OF FILE plyia_connect.html ---
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PLYIA Connect - La Puissance de l'IA en Cloud, par la Communauté</title>
-    <meta name="description" content="Découvrez PLYIA Connect, notre projet participatif pour rendre l'IA de pointe accessible à tous, sans contraintes matérielles, via un abonnement.">
-    
+    <title>PLYIA Connect - Votre Serveur d'IA Privé en Intranet</title>
+    <meta name="description" content="Découvrez PLYIA Connect : transformez votre machine puissante en serveur d'IA centralisé pour tout votre réseau local. Accédez à la puissance LLM depuis n'importe quel appareil.">
+
     <link rel="icon" type="image/png" href="../images/PLYIA_Icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
-    
+
     <link rel="stylesheet" href="../style.css">
 </head>
 <body class="connect-page">
@@ -36,9 +38,8 @@
 
     <main class="product-detail-page">
         <header class="connect-hero">
-            <!-- Le conteneur principal est maintenant un flexbox -->
             <div class="hero-content-wrapper animate-on-scroll">
-                
+
                 <!-- Colonne 1 : Le Logo -->
                 <div class="hero-logo-container">
                     <img src="../images/PLYIA_Connect_Icon.png" alt="PLYIA Connect Logo" class="connect-logo">
@@ -47,17 +48,17 @@
                 <!-- Colonne 2 : Le Texte -->
                 <div class="hero-text-content">
                     <h1>PLYIA Connect</h1>
-                    <p class="tagline">La performance des plus grands modèles d'IA, sans les contraintes matérielles. Accessible à tous, sur n'importe quel appareil.</p>
-                    <p>PLYIA Connect est notre vision pour l'avenir : un service cloud puissant, financé par et pour sa communauté.</p>
+                    <p class="tagline">Centralisez la puissance de l'IA sur votre serveur. Distribuez-la sur tout votre réseau.</p>
+                    <p>PLYIA Connect transforme votre ordinateur le plus performant en un **moyeu d'intelligence local**. Accédez à vos LLM et outils de génération depuis n'importe quel appareil connecté à votre intranet.</p>
                 </div>
 
             </div>
 
-            <!-- La boîte de financement est maintenant un élément séparé sous le hero -->
+            <!-- Barre de progression communautaire -->
             <div class="funding-box-wrapper animate-on-scroll" style="transition-delay: 0.2s;">
                 <div class="funding-box">
-                    <h3>Objectif de Lancement Communautaire</h3>
-                    <p>Chaque licence locale vendue nous rapproche du lancement. <br><em>(Avancement mis à jour tous les vendredis)</em></p>
+                    <h3>Objectif de Développement : Architecture Serveur</h3>
+                    <p>Soutenez le développement de notre solution de déploiement en réseau local. <br><em>(Avancement mis à jour tous les vendredis)</em></p>
                     <div class="progress-bar-container">
                         <div id="progress-bar-fill" class="progress-bar-fill"></div>
                     </div>
@@ -72,21 +73,21 @@
         <section class="full-width-section alternate-bg">
             <div class="problem-solution-content">
                 <div class="philosophy-card animate-on-scroll">
-                    <h3 style="text-align: center;">Le Défi de l'IA Locale</h3>
-                    <p>Notre suite PLYIA est fidèle à sa promesse de souveraineté numérique. Mais cette approche a une contrepartie : elle exige un matériel puissant et récent, ce qui peut exclure de nombreux utilisateurs, notamment sur Windows.</p>
+                    <h3 style="text-align: center;">Le Problème du Multi-Poste</h3>
+                    <p>Installer et faire tourner des modèles d'IA gourmands sur chaque ordinateur, tablette ou smartphone de la maison (ou de l'entreprise) est coûteux et techniquement complexe, voire impossible sur les appareils légers.</p>
                 </div>
                 <div class="philosophy-card animate-on-scroll" style="transition-delay: 0.2s;">
-                    <h3 style="text-align: center;">Notre Solution : Le Cloud PLYIA</h3>
-                    <p>PLYIA Connect est notre réponse. Nous faisons tourner les modèles d'IA les plus puissants sur <strong>nos propres serveurs GPU</strong>, vous y donnant accès via une application simple et un abonnement.</p>
+                    <h3 style="text-align: center;">La Solution : IA Centralisée</h3>
+                    <p>Avec PLYIA Connect, vous installez la suite logicielle une seule fois sur votre <strong>serveur ou PC "maître" (équipé d'un GPU)</strong>. Le logiciel génère alors une interface accessible via votre réseau local (IP privée).</p>
                 </div>
                 <div class="philosophy-card animate-on-scroll" style="transition-delay: 0.4s;">
-                    <h3 style="text-align: center;">L'Accessibilité Universelle</h3>
-                    <p>Le résultat ? Vous pourrez utiliser toute la puissance de PLYIA depuis n'importe où, sur n'importe quel appareil :</p>
+                    <h3 style="text-align: center;">Zéro Contrainte Client</h3>
+                    <p>Vos autres appareils n'ont besoin d'aucune puissance de calcul. Ils se connectent au serveur PLYIA via le Wi-Fi ou Ethernet pour utiliser l'IA de pointe en toute fluidité :</p>
                     <ul class="platform-list">
-                        <li>✓ Site Web</li>
-                        <li>✓ Application Windows</li>
-                        <li>✓ Application Linux</li>
-                        <li>✓ Application Android</li>
+                        <li>✓ PC Portables légers</li>
+                        <li>✓ Tablettes & Smartphones</li>
+                        <li>✓ Postes de travail secondaires</li>
+                        <li>✓ Sécurité totale (Données en interne)</li>
                     </ul>
                 </div>
             </div>
@@ -119,9 +120,9 @@
             const progressBarFill = document.getElementById('progress-bar-fill');
             const progressCounter = document.getElementById('progress-counter');
             const goal = 400;
-            const currentSales = 0; // NOTE: Mettez à jour cette valeur manuellement
+            const currentSales = 124; // NOTE: Mettez à jour cette valeur manuellement
             const percentage = Math.min((currentSales / goal) * 100, 100);
-            
+
             setTimeout(() => { progressBarFill.style.width = percentage + '%'; }, 500);
 
             let start = 0;
