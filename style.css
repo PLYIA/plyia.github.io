@@ -1490,3 +1490,28 @@ section {
         align-self: center !important; /* Pour annuler l'alternance */
     }
 }
+
+/* Style spécifique pour la nouveauté Agentic Coder */
+.product-card.new-release {
+    border: 1px solid rgba(0, 122, 255, 0.4);
+    background: rgba(0, 122, 255, 0.05); /* Un léger fond bleu pour le distinguer */
+    position: relative;
+    overflow: visible !important; /* EMPÊCHE LE TAG D'ÊTRE COUPÉ */
+    margin-top: 15px; /* Donne de l'espace pour que le tag ne touche pas le contenu au-dessus */
+}
+
+.featured-badge {
+    background: linear-gradient(90deg, #007AFF, #00C6FF);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 6px 15px;
+    border-radius: 20px;
+    position: absolute;
+    top: -15px; /* Positionné à cheval sur la bordure haute */
+    right: 20px;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 15px rgba(0, 122, 255, 0.5);
+    z-index: 10;
+    white-space: nowrap; /* Évite que le texte saute à la ligne */
+}
