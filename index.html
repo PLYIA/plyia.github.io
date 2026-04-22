@@ -20,42 +20,66 @@
       gtag('config', 'G-VR0VNZ9C4N');
     </script>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PLYIA | L'IA qui vous appartient</title>
-    <link rel="icon" type="image/png" href="images/PLYIA_Icon.png">
-    <meta name="description" content="Découvrez PLYIA, la suite de logiciels IA 100% privés qui tournent sur votre machine. Sans abonnement, sans espionnage.">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap" rel="stylesheet">
-    
     <link rel="stylesheet" href="style.css">
 
     <!-- SEO Meta Tags -->
-    <meta name="keywords" content="PLYIA, IA, Intelligence Artificielle, Logiciel IA, IA privée, GPT local, Stable Diffusion local">
+    <meta name="keywords" content="PLYIA, Agentic Coder, IA, Intelligence Artificielle, Logiciel IA, IA privée, GPT local, Stable Diffusion local, Serveur IA, Intranet IA">
     <meta name="author" content="MadeByBatpolygon">
 
-    <!-- Open Graph Meta Tags (pour le partage sur les réseaux sociaux) -->
-    <meta property="og:title" content="PLYIA | L'IA qui vous appartient">
-    <meta property="og:description" content="Découvrez PLYIA, la suite de logiciels IA 100% privés qui tournent sur votre machine. Sans abonnement, sans espionnage.">
-    <meta property="og:image" content="https://plyia.fr/images/PLYIA_Icon.png">
-    <meta property="og:url" content="https://plyia.fr/">
-    <meta property="og:type" content="website">
+    <style>
+        /* --- STYLE SPÉCIFIQUE NOUVEAUTÉ AGENTIC CODER --- */
+        
+        .featured-badge {
+            background: linear-gradient(90deg, #007AFF, #00C6FF);
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 6px 15px;
+            border-radius: 20px;
+            position: absolute;
+            top: -15px; /* Positionné sur la bordure */
+            right: 20px;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 15px rgba(0, 122, 255, 0.5);
+            z-index: 10;
+            white-space: nowrap;
+        }
 
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="PLYIA | L'IA qui vous appartient">
-    <meta name="twitter:description" content="Découvrez PLYIA, la suite de logiciels IA 100% privés qui tournent sur votre machine. Sans abonnement, sans espionnage.">
-    <meta name="twitter:image" content="https://plyia.fr/images/PLYIA_Icon.png">
+        .product-card.new-release {
+            border: 1px solid rgba(0, 122, 255, 0.4);
+            background: rgba(0, 122, 255, 0.05);
+            position: relative;
+            overflow: visible !important; /* EMPÊCHE LE TAG D'ÊTRE COUPÉ */
+        }
+
+        /* Conteneur pour centrer Agentic Coder en bas de la grille */
+        .featured-product-row {
+            grid-column: 1 / -1; /* Occupe toute la largeur de la grille */
+            display: flex;
+            justify-content: center; /* Centre la carte */
+            margin-top: 2rem;
+            padding-bottom: 1rem;
+        }
+
+        /* Fixe la largeur pour que la carte centrée soit identique aux autres */
+        .featured-product-row .product-card-link {
+            width: 100%;
+            max-width: 400px;
+        }
+
+        @media (max-width: 768px) {
+            .featured-product-row {
+                margin-top: 0;
+            }
+        }
+    </style>
 </head>
-<button id="scrollTopBtn" title="Retour en haut">↑</button>
 <body>
-    <!-- Google Tag Manager (noscript) -->
+    <button id="scrollTopBtn" title="Retour en haut">↑</button>
+    
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KVR89QZ5"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    <!-- Background Orbs -->
+
     <div class="blur-orb" id="orb1"></div>
     <div class="blur-orb" id="orb2"></div>
 
@@ -77,7 +101,6 @@
 
     <header class="hero">
         <div class="hero-content">
-            <!-- LOGO DYNAMIQUE -->
             <div class="dynamic-logo">
                 <img src="images/PLYIA_IconPart.png" alt="Icône PLYIA" class="logo-icon">
                 <div class="logo-text"></div>
@@ -85,7 +108,7 @@
             </div>
             
             <h1>L'IA qui vous appartient.</h1>
-            <p>Déployez la puissance de l'IA sur votre PC, en un clic. Zéro code, zéro configuration, 100% privé.</p>
+            <p>Déployez la puissance de l'IA sur votre PC ou votre réseau local. Zéro code, 100% privé, 100% souverain.</p>
             <a href="#produits" class="cta-button">Découvrir les logiciels</a>
         </div>
     </header>
@@ -94,15 +117,31 @@
         <section id="produits" class="products-section">
             <h2>Nos Logiciels Disponibles</h2>
             <div class="products-grid">
+                
+                <div class="featured-product-row animate-on-scroll">
+                    <a href="products/agentic_coder.html" class="product-card-link">
+                        <div class="product-card new-release">
+                            <div class="featured-badge">NOUVEAU - OPEN SOURCE</div>
+                            <div class="product-card-header">
+                                <img src="images/product_icons/AgenticCoder_Icon.png" alt="Icône Agentic Coder" class="product-card-icon">
+                                <h3>Agentic Coder</h3>
+                            </div>
+                            <div class="product-card-content">
+                                <p>L'IDE intelligent 100% local. Codez en Python et HTML avec l'aide d'agents IA autonomes, sans aucun frais.</p>
+                                <p class="product-specs">IA: GGUF Support | Specs: <strong>CPU / GPU</strong>, 16 Go+ RAM</p>
+                                <div class="details-button">Accéder au Code (Gratuit)</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
                 <!-- Carte Produit 1 : Pulse Editor -->
                 <a href="products/pulse_editor.html" class="product-card-link animate-on-scroll">
                     <div class="product-card">
-                        <!-- NOUVEAU : En-tête -->
                         <div class="product-card-header">
                             <img src="images/product_icons/PulseEditor_Icon.png" alt="Icône Pulse Editor" class="product-card-icon">
                             <h3>Pulse Editor</h3>
                         </div>
-                        <!-- NOUVEAU : Contenu Principal -->
                         <div class="product-card-content">
                             <p>L'éditeur de texte IA minimaliste pour des tâches atomiques : reformuler, corriger et résumer.</p>
                             <p class="product-specs">IA: Phi-3-mini | Specs: <strong>CPU Only</strong>, 8 Go+ RAM</p>
@@ -110,6 +149,7 @@
                         </div>
                     </div>
                 </a>
+
                 <!-- Carte Produit 2 : Pixel Spark -->
                 <a href="products/pixel_spark.html" class="product-card-link animate-on-scroll">
                     <div class="product-card">
@@ -124,6 +164,7 @@
                         </div>
                     </div>
                 </a>
+
                 <!-- Carte Produit 3 : Kortex Chat -->
                 <a href="products/kortex_chat.html" class="product-card-link animate-on-scroll">
                     <div class="product-card">
@@ -138,44 +179,45 @@
                         </div>
                     </div>
                 </a>
+
+                <!-- NOUVEAUTÉ : Agentic Coder (CENTRÉ EN BAS) -->
             </div>
         </section>
 
         <section id="vision" class="philosophy-section">
             <h2>Deux Chemins, Une Mission : L'IA Pour Tous</h2>
             <p style="max-width: 80ch; margin-bottom: 3rem;">
-                Notre mission est de rendre l'IA puissante accessible à tous. Nous savons que chaque utilisateur a des besoins différents. C'est pourquoi nous proposons deux approches distinctes.
+                Notre mission est de rendre l'IA puissante accessible à tous, que vous soyez un utilisateur unique ou que vous souhaitiez équiper tout votre foyer.
             </p>
             <div class="vision-accordion">
-                <!-- Carte 1 : La Voie Locale (Ouverte par défaut) -->
+                <!-- Carte 1 : La Voie Locale -->
                 <div class="philosophy-card vision-card active">
                     <button class="vision-card-toggle">
                         <h3>PLYIA Local : La Voie de la Souveraineté</h3>
                     </button>
                     <div class="vision-card-content">
-                        <p>Pour ceux qui ont le matériel et exigent un contrôle absolu. Cette gamme est fidèle à notre promesse fondamentale :</p>
+                        <p>Pour ceux qui ont le matériel et exigent un contrôle absolu sur leur propre poste de travail :</p>
                         <ul class="vision-list">
                             <li><strong>Confidentialité Absolue :</strong> Rien ne quitte jamais votre disque dur.</li>
-                            <li><strong>Propriété à Vie :</strong> Vous achetez votre logiciel, vous ne le louez pas.</li>
-                            <li><strong>Accès Hors Ligne :</strong> Une fois installé, le logiciel est 100% fonctionnel.</li>
+                            <li><strong>Propriété à Vie :</strong> Pas d'abonnement, le logiciel vous appartient.</li>
+                            <li><strong>Engagement Communautaire :</strong> Des outils comme Agentic Coder sont offerts en Open Source.</li>
                         </ul>
                     </div>
                 </div>
 
-                <!-- Carte 2 : La Voie Cloud (Fermée par défaut, avec le contenu du teaser) -->
+                <!-- Carte 2 : La Voie Serveur -->
                 <div class="philosophy-card vision-card">
                     <button class="vision-card-toggle">
-                        <h3>PLYIA Connect : La Voie de l'Accessibilité</h3>
+                        <h3>PLYIA Connect : La Voie de la Mutualisation</h3>
                     </button>
                     <div class="vision-card-content">
-                        <!-- NOUVEAU CONTENU FUSIONNÉ ICI -->
                         <div class="connect-teaser-merged">
                             <div class="connect-teaser-logo">
                                 <img src="images/PLYIA_Connect_Icon.png" alt="PLYIA Connect Logo">
                             </div>
                             <div class="connect-teaser-text">
-                                <p>La puissance des meilleurs modèles d'IA, <strong>sans les contraintes matérielles</strong>. Notre projet participatif pour rendre l'IA de pointe accessible à tous, sur n'importe quel appareil, via un service cloud.</p>
-                                <a href="products/plyia_connect.html" class="cta-button">Découvrir le Projet</a>
+                                <p>Transformez votre machine la plus puissante en un <strong>serveur d'IA privé</strong>. Accédez à la puissance de PLYIA sur n'importe quel appareil de votre maison via votre réseau local (Intranet).</p>
+                                <a href="products/plyia_connect.html" class="cta-button">Découvrir le Système Serveur</a>
                             </div>
                         </div>
                     </div>
@@ -190,7 +232,7 @@
                 <div class="roadmap-card animate-on-scroll"><p><strong>Echo Voice:</strong> Outil de clonage vocal et Text-to-Speech éthique et privé.</p></div>
                 <div class="roadmap-card animate-on-scroll"><p><strong>Nexus Note:</strong> Votre carnet de notes intelligent pour brainstormer et rédiger.</p></div>
                 <div class="roadmap-card animate-on-scroll"><p><strong>Cortex Command:</strong> Traduisez le langage naturel en commandes pour votre terminal.</p></div>
-                <div class="roadmap-card animate-on-scroll"><p><strong> Chrono Weaver:</strong> Une plateforme de jeu de rôle textuel avec une IA comme Maître du Jeu.</p></div>
+                <div class="roadmap-card animate-on-scroll"><p><strong> Chrono Weaver:</strong> Jeu de rôle textuel avec une IA comme Maître du Jeu.</p></div>
             </div>
             <a href="mailto:plyiafr@gmail.com?subject=Proposition%20pour%20la%20suite%20PLYIA" class="cta-button suggestion-button animate-on-scroll">Faire une proposition</a>
         </section>
@@ -218,7 +260,6 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // --- ANIMATION AU DÉFILEMENT ---
             const observer = new IntersectionObserver(entries => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -228,12 +269,8 @@
                 });
             }, { threshold: 0.1 });
 
-            const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
-            elementsToAnimate.forEach(element => {
-                observer.observe(element);
-            });
+            document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
 
-            // --- SCRIPT PARALLAXE ---
             const heroSection = document.querySelector('.hero');
             const logoIcon = document.querySelector('.logo-icon');
             const logoText = document.querySelector('.logo-text');
@@ -246,48 +283,28 @@
                 const { clientX, clientY } = e;
                 const offsetX = (clientX - centerX);
                 const offsetY = (clientY - centerY);
-                const iconMoveFactor = 1 / 25;
-                const textMoveFactor = 1 / 50;
-
-                logoIcon.style.transform = `translate(${offsetX * iconMoveFactor}px, ${offsetY * iconMoveFactor}px)`;
-                logoText.style.transform = `translate(${offsetX * textMoveFactor}px, ${offsetY * textMoveFactor}px)`;
-                logoOutline.style.transform = `translate(${offsetX * textMoveFactor}px, ${offsetY * textMoveFactor}px)`;
+                logoIcon.style.transform = `translate(${offsetX * 1/25}px, ${offsetY * 1/25}px)`;
+                logoText.style.transform = `translate(${offsetX * 1/50}px, ${offsetY * 1/50}px)`;
+                logoOutline.style.transform = `translate(${offsetX * 1/50}px, ${offsetY * 1/50}px)`;
             });
 
             heroSection.addEventListener('mouseleave', () => {
-                logoIcon.style.transform = `translate(0, 0)`;
-                logoText.style.transform = `translate(0, 0)`;
-                logoOutline.style.transform = `translate(0, 0)`;
+                [logoIcon, logoText, logoOutline].forEach(el => el.style.transform = 'translate(0,0)');
             });
 
             const scrollTopBtn = document.getElementById('scrollTopBtn');
-
             window.onscroll = () => {
-                if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-                    scrollTopBtn.classList.add('visible');
-                } else {
-                    scrollTopBtn.classList.remove('visible');
-                }
+                if (window.scrollY > 300) scrollTopBtn.classList.add('visible');
+                else scrollTopBtn.classList.remove('visible');
             };
+            scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-            scrollTopBtn.addEventListener('click', () => {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            });
-
-            const visionToggles = document.querySelectorAll('.vision-card-toggle');
             const visionCards = document.querySelectorAll('.vision-card');
-
-            visionToggles.forEach(toggle => {
+            document.querySelectorAll('.vision-card-toggle').forEach(toggle => {
                 toggle.addEventListener('click', () => {
                     const parentCard = toggle.closest('.vision-card');
-
-                    // Si la carte cliquée n'est pas déjà active, on la traite
                     if (!parentCard.classList.contains('active')) {
-                        // D'abord, on ferme toutes les autres cartes
-                        visionCards.forEach(card => {
-                            card.classList.remove('active');
-                        });
-                        // Ensuite, on ouvre la carte cliquée
+                        visionCards.forEach(card => card.classList.remove('active'));
                         parentCard.classList.add('active');
                     }
                 });
