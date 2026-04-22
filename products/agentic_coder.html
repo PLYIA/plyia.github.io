@@ -1,0 +1,354 @@
+--- START OF FILE agentic_coder.html ---
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agentic Coder - L'IDE IA Open Source par PLYIA</title>
+    <meta name="description" content="Découvrez Agentic Coder, le premier IDE IA 100% local et open source. Codez en Python et HTML avec la puissance des LLM GGUF, totalement hors-ligne.">
+    <link rel="icon" type="image/png" href="../images/PLYIA_Icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VR0VNZ9C4N"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-VR0VNZ9C4N');
+    </script>
+
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        /* Styles pour le formulaire de test */
+        .test-form {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.2rem;
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        .form-group label {
+            font-weight: 600;
+            font-size: 0.85rem;
+            color: var(--accent-blue);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .form-group input, .form-group select {
+            padding: 0.8rem;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.1);
+            background: rgba(255,255,255,0.05);
+            color: white;
+            font-family: 'Sora', sans-serif;
+            transition: all 0.3s ease;
+        }
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--accent-blue);
+            background: rgba(255,255,255,0.1);
+        }
+        .detection-badge {
+            display: inline-block;
+            padding: 4px 8px;
+            background: rgba(0, 200, 255, 0.2);
+            border-radius: 4px;
+            font-size: 0.7rem;
+            margin-top: 5px;
+            color: #00d4ff;
+        }
+    </style>
+
+    <!-- SEO Meta Tags -->
+    <meta name="keywords" content="Agentic Coder, PLYIA, IDE IA, Open Source, Python, HTML, GGUF, LLM Local, Llama.cpp, Programmation IA">
+    <meta name="author" content="PLYIA">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Agentic Coder - L'IDE IA 100% Local et Open Source">
+    <meta property="og:description" content="Le premier produit gratuit de PLYIA. Un environnement de développement intelligent avec support LLM local (GGUF) pour coder sans abonnement.">
+    <meta property="og:image" content="https://plyia.fr/images/screenshots/agentic_coder_hero.jpg">
+    <meta property="og:url" content="https://plyia.fr/products/agentic_coder.html">
+    <meta property="og:type" content="website">
+</head>
+<button id="scrollTopBtn" title="Retour en haut">↑</button>
+<body>
+    <div class="blur-orb" id="orb1"></div>
+    <div class="blur-orb" id="orb2"></div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo"><img src="../images/PLYIA_Icon.png" alt="PLYIA Logo"><span>PLYIA</span></a>
+            <ul class="nav-links">
+                <li><a href="../index.html#produits">Produits</a></li>
+                <li><a href="../index.html#vision">Notre Vision</a></li>
+                <li><a href="../index.html#roadmap">Roadmap</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="plyia_connect.html" class="nav-cta-special">PLYIA Connect</a>
+                <a href="../contact.html" class="nav-cta">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="product-detail-page">
+        <header class="product-hero-container">
+            <a href="../index.html#produits" class="back-link">← Retour aux produits</a>
+
+            <div class="product-title-group">
+                <img src="../images/product_icons/AgenticCoder_Icon.png" alt="Icône Agentic Coder" class="product-hero-icon">
+                <h1>Agentic Coder</h1>
+            </div>
+
+            <p class="tagline">L'IDE intelligent 100% local, privé et open source. La puissance de l'IA agentique au service de votre code Python et HTML.</p>
+        </header>
+
+        <div class="product-showcase-grid">
+            <div class="product-gallery-container">
+                <div class="product-gallery">
+                    <div class="slider-wrapper">
+                        <div class="slider-container">
+                            <div class="slide"><img src="../images/screenshots/agentic_coder_screenshot1.jpg" alt="Interface Agentic Coder" onclick="openLightbox(this)"></div>
+                        </div>
+                    </div>
+                    <button class="slider-arrow prev" onclick="moveSlide(-1)">&#10094;</button>
+                    <button class="slider-arrow next" onclick="moveSlide(1)">&#10095;</button>
+                    <div class="slider-nav"></div>
+                </div>
+            </div>
+
+            <div class="product-info-container">
+                <div class="buy-box">
+                    <span class="price-detail" style="color: var(--accent-blue);">GRATUIT — Open Source</span>
+                    <a href="https://github.com/PLYIA/agentic_coder" target="_blank" class="cta-button" style="background: linear-gradient(135deg, #333, #000);">
+                        <svg style="width:18px; height:18px; display:inline; margin-right:8px; vertical-align:middle;" viewBox="0 0 24 24" fill="white"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.297 24 12c0-6.627-5.373-12-12-12"/></svg>
+                        Voir sur GitHub
+                    </a>
+                </div>
+
+                <div class="specs-box">
+                    <div class="os-spec-group active">
+                        <p style="font-size: 0.9rem; margin-bottom: 1rem; color: var(--text-color); line-height: 1.4;">
+                            <strong>Le premier produit gratuit de PLYIA.</strong> Agentic Coder est un projet communautaire destiné à démocratiser le développement assisté par IA locale.
+                        </p>
+                        <p><strong>Support Langages :</strong> Python (complet), HTML/CSS (aperçu)</p>
+                        <p><strong>Moteur IA :</strong> Llama.cpp (Format GGUF)</p>
+                        <p><strong>Configuration :</strong> 16 Go+ RAM | GPU NVIDIA recommandé (8 Go VRAM+)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="disclaimer-box" style="text-align: left; max-width: 900px; margin: 2rem auto; border-left: 4px solid var(--accent-blue);">
+            <h3>🚀 100% Gratuit, 100% Open Source</h3>
+            <p>
+                Chez PLYIA, nous croyons que les outils fondamentaux de création doivent appartenir à ceux qui les utilisent. <strong>Agentic Coder est notre contribution à la communauté.</strong> C'est un logiciel sans télémétrie, sans licence payante et sans limites, conçu pour fonctionner là où vous êtes, même sans internet.
+            </p>
+        </div>
+
+        <section class="full-width-section simple-steps-section" style="padding-top: 4rem; padding-bottom: 4rem;">
+            <h2>Prêt à coder en 3 étapes</h2>
+            <div class="philosophy-grid" style="max-width: 1200px; margin-top: 2rem;">
+                <div class="philosophy-card">
+                    <h3 style="text-align: center;">1. Clonez le Projet</h3>
+                    <p style="text-align: center;">Récupérez le code source sur <a href="https://github.com/PLYIA/agentic_coder" target="_blank" style="color: var(--accent-blue);">GitHub</a>. L'installation est simple et ne nécessite qu'un environnement Python standard.</p>
+                </div>
+                <div class="philosophy-card">
+                    <h3 style="text-align: center;">2. Importez vos GGUF</h3>
+                    <p style="text-align: center;">Glissez vos modèles favoris (Qwen2.5-Coder, Llama-3.2, etc.) au format GGUF dans le dossier <code>models</code>. Ils seront détectés automatiquement.</p>
+                </div>
+                <div class="philosophy-card">
+                    <h3 style="text-align: center;">3. Codez avec l'Agent</h3>
+                    <p style="text-align: center;">Posez vos questions ou demandez des modifications complexes. L'agent analyse votre fichier et propose des Diffs intelligents.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="product-details-content">
+            <section class="product-description">
+                <h2>L'IDE Local de Nouvelle Génération</h2>
+                <p>Agentic Coder n'est pas qu'un simple éditeur de texte. C'est un environnement de développement qui intègre une intelligence agentique capable d'agir directement sur votre système de fichiers.</p>
+                <h3>Pourquoi Agentic Coder ?</h3>
+                <ul>
+                    <li>✓ <strong>Zéro Abonnement :</strong> Pas de frais mensuels. Votre matériel est votre seul moteur.</li>
+                    <li>✓ <strong>Confidentialité Totale :</strong> Votre code ne quitte jamais votre machine. Idéal pour les projets sensibles.</li>
+                    <li>✓ <strong>Mode Diff Intelligent :</strong> L'IA remplace uniquement les lignes nécessaires, économisant ainsi du temps et des ressources GPU.</li>
+                    <li>✓ <strong>Terminal Intégré :</strong> Exécutez vos scripts Python et installez vos dépendances sans quitter l'interface.</li>
+                </ul>
+            </section>
+
+            <div class="usage-tips-box">
+                <h3>💡 Fonctionnalités Avancées</h3>
+                <p>Agentic Coder intègre des outils pensés pour les développeurs exigeants :</p>
+                <ul style="text-align: left; list-style-position: inside; margin-top: 1rem;">
+                    <li><strong>Indexation de Projet :</strong> L'IA a connaissance de l'arborescence complète pour mieux comprendre le contexte global.</li>
+                    <li><strong>Multi-Onglets :</strong> Travaillez sur plusieurs fichiers simultanément avec une interface fluide et moderne.</li>
+                    <li><strong>Auto-Correction :</strong> En cas d'erreur dans le terminal, un bouton vous permet de demander à l'IA d'analyser et de corriger le bug.</li>
+                </ul>
+            </div>
+
+            <div class="disclaimer-box">
+                <h3>⚠️ Hardware et Inférence</h3>
+                <p>
+                    <strong>Puissance Locale :</strong> Puisque Agentic Coder utilise <code>llama.cpp</code> pour l'inférence, la rapidité de génération dépend directement de votre processeur (CPU) et de votre carte graphique (GPU). Pour une expérience "agentique" fluide, l'utilisation d'un GPU avec au moins 8 Go de VRAM est fortement recommandée.
+                </p>
+                <p style="margin-top: 1rem;">
+                    <strong>Modèles recommandés :</strong> Nous conseillons l'utilisation de modèles optimisés pour le code, comme <em>Qwen2.5-Coder</em> ou <em>DeepSeek-Coder</em> au format GGUF (quantification Q4_K_M ou supérieure).
+                </p>
+            </div>
+
+            <section id="compatibility-test" class="compatibility-section" style="background: rgba(255,255,255,0.03); padding: 3rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1);">
+                <h2>Test de Performance Estimé</h2>
+                <p style="margin-bottom: 2rem;">Vérifiez si votre machine est prête pour l'IA agentique locale.</p>
+
+                <div id="test-box">
+                    <div class="test-form">
+                        <div class="form-group">
+                            <label for="ram-input">RAM (Go)</label>
+                            <input type="number" id="ram-input" placeholder="Ex: 16">
+                        </div>
+                        <div class="form-group">
+                            <label for="cpu-input">Cœurs CPU</label>
+                            <input type="number" id="cpu-input" placeholder="Ex: 8">
+                        </div>
+                        <div class="form-group">
+                            <label for="gpu-brand">Marque GPU</label>
+                            <select id="gpu-brand">
+                                <option value="nvidia">NVIDIA (CUDA)</option>
+                                <option value="apple">Apple Silicon (M1/M2/M3)</option>
+                                <option value="amd">AMD (ROCm)</option>
+                                <option value="intel">Intel / Intégré</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="vram-input">VRAM (Go)</label>
+                            <input type="number" id="vram-input" placeholder="Ex: 8">
+                        </div>
+                    </div>
+
+                    <button id="run-test-btn" class="cta-button">Analyser ma configuration</button>
+
+                    <div id="detection-info" style="margin-top: 10px; font-size: 0.8rem; opacity: 0.7;">
+                        <!-- Infos de détection auto ici -->
+                    </div>
+
+                    <div id="test-results" class="results-container"></div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()"><span class="lightbox-close">&times;</span><img class="lightbox-content" id="lightbox-img"></div>
+
+    <footer>
+        <div class="footer-socials">
+            <a href="https://www.youtube.com/@PlyiaOfficiel" target="_blank" rel="noopener noreferrer" title="YouTube">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+            </a>
+        </div>
+        <div class="footer-links">
+            <a href="../faq.html">FAQ</a>
+            <a href="../contact.html">Contact</a>
+            <a href="../legal/mentions-legales.html">Mentions Légales</a>
+        </div>
+        <p>© 2025 PLYIA - Projet Open Source - Agentic Coder.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- DÉTECTION AUTOMATIQUE ---
+            const detectHardware = () => {
+                const ram = navigator.deviceMemory || "";
+                const cpu = navigator.hardwareConcurrency || "";
+                const infoDiv = document.getElementById('detection-info');
+
+                if(ram !== "") document.getElementById('ram-input').value = ram;
+                if(cpu !== "") document.getElementById('cpu-input').value = cpu;
+
+                try {
+                    const canvas = document.createElement('canvas');
+                    const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+                    const debugInfo = gl.getExtension('WEBGL_debug_renderer_info');
+                    if (debugInfo) {
+                        const renderer = gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL).toLowerCase();
+                        let brand = "intel";
+                        if (renderer.includes('nvidia')) brand = "nvidia";
+                        else if (renderer.includes('amd') || renderer.includes('radeon')) brand = "amd";
+                        else if (renderer.includes('apple') || renderer.includes('m1') || renderer.includes('m2')) brand = "apple";
+
+                        document.getElementById('gpu-brand').value = brand;
+                        infoDiv.innerHTML = `<span class="detection-badge">Matériel détecté : ${renderer}</span>`;
+                    }
+                } catch (e) {
+                    console.log("Erreur détection GPU");
+                }
+            };
+
+            detectHardware();
+
+            // --- CARROUSEL ---
+            let currentSlide = 0;
+            const slides = document.querySelectorAll('.slide');
+            const sliderContainer = document.querySelector('.slider-container');
+            const sliderNav = document.querySelector('.slider-nav');
+            if (slides.length > 0) {
+                slides.forEach((_, index) => {
+                    const dot = document.createElement('div');
+                    dot.classList.add('slider-nav-dot');
+                    dot.addEventListener('click', () => goToSlide(index));
+                    sliderNav.appendChild(dot);
+                });
+                const dots = document.querySelectorAll('.slider-nav-dot');
+                window.goToSlide = (index) => { currentSlide = index; sliderContainer.style.transform = `translateX(-${currentSlide * 100}%)`; updateNav(); };
+                const updateNav = () => { dots.forEach(dot => dot.classList.remove('active')); dots[currentSlide].classList.add('active'); };
+                window.moveSlide = (n) => { let newIndex = currentSlide + n; if (newIndex >= slides.length) newIndex = 0; if (newIndex < 0) newIndex = slides.length - 1; goToSlide(newIndex); };
+                goToSlide(0);
+            }
+
+            // --- LIGHTBOX ---
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            window.openLightbox = (img) => { lightbox.style.display = 'flex'; lightboxImg.src = img.src; };
+            window.closeLightbox = () => { lightbox.style.display = 'none'; };
+
+            // --- CALCUL PERFORMANCE ---
+            const runTestBtn = document.getElementById('run-test-btn');
+            const testResultsDiv = document.getElementById('test-results');
+
+            runTestBtn.addEventListener('click', () => {
+                const ram = parseInt(document.getElementById('ram-input').value) || 0;
+                const vram = parseInt(document.getElementById('vram-input').value) || 0;
+                const brand = document.getElementById('gpu-brand').value;
+
+                let score = 0;
+                let text = "";
+
+                if (brand === "nvidia" || brand === "apple") score += 3;
+                if (vram >= 12) score += 5; else if (vram >= 8) score += 3; else if (vram >= 4) score += 1;
+                if (ram >= 32) score += 3; else if (ram >= 16) score += 2;
+
+                if (score >= 8) {
+                    text = "🚀 <strong>EXCEPTIONNEL :</strong> Votre machine est un monstre de puissance. Agentic Coder sera instantané, même avec des modèles lourds.";
+                } else if (score >= 5) {
+                    text = "✅ <strong>OPTIMAL :</strong> Configuration parfaite pour un usage fluide au quotidien avec Qwen2.5-Coder 7B.";
+                } else if (score >= 3) {
+                    text = "⚠️ <strong>CAPABLE :</strong> Ça fonctionnera, mais privilégiez des modèles quantifiés (Q4_K_M) pour garder de la réactivité.";
+                } else {
+                    text = "🐢 <strong>LIMITÉ :</strong> L'IA sera lente. On recommande d'ajouter de la RAM ou d'utiliser un GPU plus puissant.";
+                }
+
+                testResultsDiv.innerHTML = `<div class="result-conclusion result-optimal" style="border-left: 4px solid var(--accent-blue); padding: 15px; background: rgba(255,255,255,0.05);">${text}</div>`;
+            });
+        });
+    </script>
+</body>
+</html>
